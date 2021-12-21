@@ -1,0 +1,105 @@
+.header-color{
+
+    background: rgb(145, 11, 11);
+
+}
+
+.header-elements-hover:hover{
+
+    border-bottom: 2px solid rgb(252, 252, 252);
+    border-top:2px solid rgb(255, 255, 255);    
+}
+
+.carousel-overlay{
+    opacity: 0.4;
+}
+
+/* .carousel-border{
+
+    border-bottom: 10px solid red;
+}*/
+
+/* .carousel-light{
+
+    color: rgb(0, 0, 0);
+    background: rgba(255, 255, 255, 0);
+
+}
+
+.carousel-dark{
+
+    color:rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0);
+
+} */
+
+.content-hover-red:hover{
+
+    background: rgb(241, 230, 230);
+}
+
+.about-us-content-color{
+    color:grey;
+}
+
+/* .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+   }
+   
+.carousel-control-next-icon {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+} */
+
+.footer-text-color{
+    color:rgb(139, 139, 139);
+}
+
+.my_card{
+
+    background-color: white;
+}
+
+.row_team_card {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: row;    
+  }
+  .team_card{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items:center;
+     padding: 20px; 
+     border-radius: 3%;
+      border: solid 2px #000000;
+      margin-left: 15px;
+       margin-right: 15px;
+       margin-bottom: 15px;
+        flex-grow: 1; 
+        max-width: 300px;
+        width: 33%;
+        height: 600px;
+        
+
+  }
+  /* Responsive layout - makes a one column layout instead of a two-column layout */
+  @media (max-width: 600px) {
+    .row_team_card {
+        flex-direction: column;
+        
+    }
+    .team_card{
+        width:100%;
+       
+    }
+  }
+
+  .centered_items{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items:center;
+  }
+
+  
