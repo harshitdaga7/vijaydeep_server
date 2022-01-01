@@ -63,5 +63,4 @@ typings/
 
 ngrok
 
-#for removing json file
 package-lock.json
