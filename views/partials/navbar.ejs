@@ -6,14 +6,14 @@
             <a href="/"><img src="/images/logo_1.png" height="72px"></a>
         </div>
         <div class="col-lg-3 text-center border border-start-0 pt-2 pb-2">
-            <div> <img src="/images/icons8-phone-ringing.gif" height="24px" width="24px"> &nbsp;<a href="tel:8425933317"
-                    class="link-danger">8425933317 / </a><a href="tel:9833896451" class="link-danger">9833896451</a>
+            <div> <img src="/images/icons8-phone-ringing.gif" height="24px" width="24px"> &nbsp;<a href="tel:+91<%= contact1 %>"
+                    class="link-danger"><%= contact1 %></a> &nbsp|&nbsp <a href="tel:+91<%= contact2 %>" class="link-danger"><%= contact2 %></a>
             </div>
         </div>
 
         <div class="col-lg-3 text-center pt-2 pb-2 border border-end-0">
             <div> <img src="/images/icons8-gmail-logo.gif" height="24px" width="24px"> &nbsp; 
-                <a href="mailto:vijaydeepagencies@gmail.com" class="link-danger">vijaydeepagencies@gmail.com</a>
+                <a href="mailto:<%= email %>" class="link-danger"><%= email %></a>
             </div>
         </div>
 
@@ -26,7 +26,7 @@
 
 <!-- Navbar -->
 <nav style="color: white;
-text-shadow: 2px 2px 4px #000000;" class="navbar navbar-expand-lg header-color navbar-dark shadow-lg fs-5 ">
+text-shadow: 2px 2px 4px #000000;" class="navbar navbar-expand-lg header-color navbar-dark shadow-lg fs-5 sticky-top ">
 
     <div class="container-fluid">
 
@@ -43,15 +43,19 @@ text-shadow: 2px 2px 4px #000000;" class="navbar navbar-expand-lg header-color n
             <ul class="navbar-nav mx-auto  mb-2 mb-lg-0">
 
                 <li class="nav-item header-elements-hover px-1">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" id = "home" href="/">Home</a>
                 </li>
 
                 <li class="nav-item header-elements-hover px-1">
-                    <a class="nav-link active" href="#">Motto</a>
+                    <a class="nav-link active" id = "motto" href="/#motto-sec">Motto</a>
                 </li>
 
-                <li class="nav-item dropdown header-elements-hover px-1">
-                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                <li class="nav-item header-elements-hover px-1">
+                    <a class="nav-link active" id = "about" href="/about">About us</a>
+                </li>
+
+                <!-- <li class="nav-item dropdown header-elements-hover px-1">
+                    <a class="nav-link dropdown-toggle active" href="/about" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         About us
                     </a>
@@ -63,31 +67,48 @@ text-shadow: 2px 2px 4px #000000;" class="navbar navbar-expand-lg header-color n
                         </li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
+                </li> -->
+
+                <li class="nav-item header-elements-hover px-1">
+                    <a class="nav-link active" id = "products" href="/products">Products</a>
                 </li>
 
                 <li class="nav-item header-elements-hover px-1">
-                    <a class="nav-link active" href="#">Products</a>
+                    <a class="nav-link active" id = "news" href="/news">News</a>
                 </li>
 
                 <li class="nav-item header-elements-hover px-1">
-                    <a class="nav-link active" href="#">News</a>
+                    <a class="nav-link active" id = "contact" href="/contact">Contact</a>
                 </li>
 
                 <li class="nav-item header-elements-hover px-1">
-                    <a class="nav-link active" href="#">Contact</a>
+                    <a class="nav-link active" id="team" href="/team">Team</a>
                 </li>
 
-                <li class="nav-item header-elements-hover px-1">
-                    <a class="nav-link active" href="#">Team</a>
-                </li>
-
-
+                <% if (role >= 1) { %>
+                    <li class="nav-item header-elements-hover px-1">
+                        <a class="nav-link active"  id = "console" href="/console">Console</a>
+                    </li>
+                <% } %>
             </ul>
 
+            <% if (role >= 2) { %>
+                <button type="button" class="btn btn-outline-light shadow-lg mx-3" data-bs-toggle="modal"
+                data-bs-target="#usersModal">manage users</button>
+            <% } %>
+
             <!-- <button class="btn btn-outline-light shadow-lg " type="submit">Login</button> -->
-            <button type="button" class="  btn btn-outline-light shadow-lg " data-bs-toggle="modal" data-bs-target="#loginModal">
-                login
-            </button>
+
+            <% if (role >= 1) { %>
+                <button type="button" id = "login_button" class="btn btn-outline-light shadow-lg " data-bs-toggle="modal" data-bs-target="#logoutModal">
+                    logout
+                </button>
+            <% } else { %>
+                <button type="button" id = "login_button" class="btn btn-outline-light shadow-lg " data-bs-toggle="modal" data-bs-target="#loginModal">
+                    login
+                </button>
+            <% }%>
+
 
         </div>
 

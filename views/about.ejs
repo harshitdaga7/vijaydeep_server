@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+
+  <%- include("partials/head"); -%>
+  <style>
+        .img-responsive{
+
+            height: 100%;
+            width: 100%;
+        }
+
+        .part-image{
+
+            max-height: 100px;
+            max-width: 100px;
+        }
+
+        .title{
+
+            font-size: 50px;
+            font-weight: 900;
+            color:rgb(39, 38, 38);
+            word-wrap: break-word;
+        }
+
+        .content{
+
+            font-size: 20px;
+            font-weight: 300;
+            color:rgb(83, 82, 82);
+        }
+
+        .test-quote{
+
+            font-size: 23px;
+            word-spacing:0px;
+            font-weight: 500;
+            font-style: italic;
+            color:black;
+        }
+
+        .test-author{
+
+            font-size: 20px;
+            word-spacing:0px;
+            font-weight: 300;
+            color:rgb(121, 120, 120);
+
+        }
+
+        #philosophy{
+
+            background: rgb(238, 233, 225);
+        }
+
+        #outer-client{
+
+            background:rgb(238, 233, 225);
+        }
+
+        #outer-certificate{
+            background:rgb(238, 233, 225);
+        }
+
+        @media (max-width: 767px) {
+        .carousel-inner .carousel-item > div {
+            display: none;
+        }
+        .carousel-inner .carousel-item > div:first-child {
+            display: block;
+        }
+    }
+
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        display: flex;
+    }
+
+    /* medium and up screens */
+    @media (min-width: 768px) {
+        
+        .carousel-inner .carousel-item-end.active,
+        .carousel-inner .carousel-item-next {
+        /* transform: translateX(25%); */
+        }
+        
+        .carousel-inner .carousel-item-start.active, 
+        .carousel-inner .carousel-item-prev {
+        /* transform: translateX(-25%); */
+        }
+    }
+
+    .carousel-inner .carousel-item-end,
+    .carousel-inner .carousel-item-start { 
+    /* transform: translateX(0); */
+    }
+
+
+</style>
+
+  <body>
+    <%- include("partials/navbar",{role:role,contact1:contact1,contact2:contact2,email:email}); -%>
+
+        <!-- Main content -->
+    <main>
+            <!-- about us section -->
+
+    <div class = "container mt-5 py-5" id = "aboutus">
+        <div class="row rounded-3 shadow-sm">
+            <div class="col-lg-8 my-auto p-1 p-lg-5 order-first order-lg-first">
+                
+                <h1 class = "title text-center text-lg-start p-4">About us</h1>
+                <hr>
+                <p class = "content text-center text-lg-start">
+                    This is abot us content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ?
+                    This is abot us content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ?
+                    This is abot us content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ?
+                    This is abot us content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ?
+                    This is abot us content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ?
+                    This is abot us content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ?
+                    This is abot us content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ?
+                    This is abot us content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ?
+                    This is abot us content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ?
+                    This is abot us content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ?
+                    This is abot us content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ?
+                    This is abot us content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ? 
+                    This is abot us content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ?
+                </p>
+
+            </div>
+            <div class="col-lg-4 text-center my-auto p-1 p-lg-2 order-last order-lg-last">
+                <img src = "build.jpg" class = "img-fluid">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- our philosophy -->
+
+    <div class = "container mt-5 py-5" id = "philosophy">
+        <div class="row rounded-3 ">
+            <div class="col-lg-8 my-auto p-1 p-lg-5 order-first order-lg-last">
+                
+                <h1 class = "title text-center text-lg-start p-4">Our Philosophy</h1>
+                <hr>
+                <p class = "content text-center text-lg-start">
+                    This is philosophy content write stuff , hello world, fuck the police, who let the dog out who ? who ? who ? who ? 
+                </p>
+
+            </div>
+            <div class="col-lg-4 text-center my-auto p-1 p-lg-2 order-last order-lg-first">
+                <img src = "build.jpg" class = "img-fluid">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Our Partners -->
+    <div class = "container mt-5 py-5" id = "partners">
+
+        <div class = "row justify-content-center">
+            <h1 class = "title text-center p-4">Our Partners</h1>
+            <hr>
+            <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                <img src = "logo_1.png" class = "part-img">
+            </div>
+            <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                <img src = "logo_1.png" class = "part-img">
+            </div>
+            <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                <img src = "logo_1.png" class = "part-img">
+            </div>
+            <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                <img src = "logo_1.png" class = "part-img">
+            </div>
+            <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                <img src = "logo_1.png" class = "part-img">
+            </div>
+            <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                <img src = "logo_1.png" class = "part-img">
+            </div>
+            <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                <img src = "logo_1.png" class = "part-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Our clients -->
+    <div id = "outer-client">
+        <div class = "container mt-5 py-5" id = "clients">
+
+            <div class = "row justify-content-center">
+                <h1 class = "title text-center p-4">Our clients</h1>
+                <hr>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- testimonials -->
+
+    <div class = "container mt-5 py-5" id = "testimonials">
+
+        <div class = "row mx-auto my-auto justify-content-center">
+            <h1 class = "title text-center p-4">Testimonials</h1>
+            <div id="test-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="carousel-item  active">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                            <div class="card border border-1 border-dark" style = "height: 100%;">
+                                <div class="card-body">
+                                  <p class="card-text test-quote text-center"> <q>Some quick example text to build on the card title and make up the bulk of the card's content </q>.</p>
+                                  <p class ="test-author text-center">- Jared Dunn , Sales and Marketing, Hooli</p>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="carousel-item">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                            <div class="card border border-1 border-dark" style = "height: 100%;">
+                                <div class="card-body">
+                                  <p class="card-text test-quote text-center"> <q>Some quick example text to build on the card title and make up the bulk of the card's content </q>.</p>
+                                  <p class ="test-author text-center">- Jared Dunn , Sales and Marketing, Hooli</p>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+
+
+                    
+                </div>
+                <a class="carousel-control-prev bg-danger w-aut" href="#test-carousel" role="button" data-bs-slide="prev" style = "width:2%">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-danger w-aut" href="#test-carousel" role="button" data-bs-slide="next" style = "width:2%">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--certificates-->
+    <div id = "outer-certificate">
+        <div class = "container mt-5 py-5"  id = "certificate">
+
+            <div class = "row justify-content-center">
+                <h1 class = "title text-center p-4">Certificates</h1>
+                <hr>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+                <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
+                    <img src = "logo_1.png" class = "part-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- <div class="container text-center my-3">
+        <h2 class="font-weight-light">Bootstrap Multi Slide Carousel</h2>
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//via.placeholder.com/500x400/e66?text=2" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//via.placeholder.com/500x400/7d2?text=3" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//via.placeholder.com/500x400?text=4" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//via.placeholder.com/500x400/aba?text=5" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 5</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//via.placeholder.com/500x400/fc0?text=6" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 6</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//via.placeholder.com/500x400/fc0?text=7" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 7</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+        <h5 class="mt-2 fw-light">advances one slide at a time</h5>
+    </div> -->
+
+    <script>
+        let items = document.querySelectorAll('.carousel .carousel-item')
+
+        items.forEach((el) => {
+            const minPerSlide = 3
+            let next = el.nextElementSibling
+            for (var i=1; i<minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+
+    </script>
+    </main>
+
+    <%- include("partials/footer",{contact1:contact1,contact2:contact2,email:email,address:address}); -%>
+
+    <%- include("partials/tail"); -%>
+
+  </body>
+
+</html>

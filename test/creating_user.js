@@ -43,7 +43,17 @@ async function test00()
     });
     console.log(user.toJSON());
 }
+async function test05()
+{
+    /// create user
+    
+    const user = await User.create({
 
+        email:"Test2@gmail.com",
+        password:"test1234567890",
+    });
+    console.log(user.toJSON());
+}
 async function test01()
 {
     const user = await User.create(correct_data1);
@@ -82,3 +92,5 @@ async function test04()
 // test04()
 
 // test03()
+
+// test05()

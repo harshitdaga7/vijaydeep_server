@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+  <%- include("partials/head"); -%>
+
+  <body>
+    <%- include("partials/navbar",{role:role,contact1:contact1,contact2:contact2,email:email}); -%>
+
+        <!-- Main content -->
+        <main>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div
+                            class="row border border-3 border-danger rounded rounded-3 mx-3 my-2 btn-dark bg-gradient text-center p-4">
+                            <a href="/console/console_team"  target="_blank" style="text-decoration: none;">
+    
+    
+                                <h1 class="text-light"><img
+                                        src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-team-management-kiranshastry-gradient-kiranshastry-1.png" />
+                                    UPDATE TEAM INFO </h1>
+                            </a>
+                        </div>
+    
+                        <div
+                            class="row border border-3 border-danger rounded rounded-3 mx-3 my-2 btn-dark bg-gradient text-center p-4">
+                            <a href="/console/console_news" target = "_blank" style="text-decoration: none;">
+    
+    
+                                <h1 class="text-light"> UPDATE NEWS INFO <img
+                                        src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-news-news-kiranshastry-gradient-kiranshastry-1.png" />
+                                </h1>
+                            </a>
+                        </div>
+                        <div
+                            class="row border border-3 border-danger rounded rounded-3 mx-3 my-2 btn-dark bg-gradient text-center p-4">
+                            <a href="/console/console_products" target = "_blank" style="text-decoration: none;">
+    
+    
+                                <h1 class="text-light"> <img
+                                        src="https://img.icons8.com/external-icongeek26-outline-colour-icongeek26/64/000000/external-goods-airport-icongeek26-outline-colour-icongeek26.png" />
+                                    UPDATE PRODUCTS INFO </h1>
+                            </a>
+                        </div>
+    
+                        <div class="row">
+    
+                            <div class="col-lg-4 col-md-12 col-sm-12 order-sm-0 order-md-1 order-lg-1 p-4 align-middle">
+                                <div
+                                    class="row border border-3 border-danger rounded rounded-3 mx-3  btn-dark bg-gradient text-center p-4 align-middle" style="height: 100%; position: relative; min-height: 200px;">
+                                    <a href="/console/console_about" target ="_blank" style="text-decoration: none;   margin: 0;
+                                    position:absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);">
+                                    <img src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-group-cyber-security-kiranshastry-gradient-kiranshastry-2.png"/>
+    
+    
+                                        <h1 class="text-light align-middle"> CHANGE ABOUT-US INFO 
+                                        </h1>
+                                        
+                                        
+                                    </a>
+                                    
+    
+    
+                                </div>
+    
+    
+    
+    
+                            </div>
+    
+                            <div class="col-lg-8 col-md-12 col-sm-12 order-sm-1 order-md-0 order-lg-0 ">
+    
+                                <div class="row border rounded rounded-3 border-success p-4 m-3">
+                                    <h2>Change Contact Info?</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="console_contact_email" class="form-label">Email address</label>
+                                            <input type="email" class="form-control" id="console_contact_email" aria-describedby="emailHelp" value = "<%= email %>">
+    
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="console_contact_1" class="form-label">Contact Number 1</label>
+                                            <input type="number" class="form-control" id="console_contact_1" value = "<% if (contact1 != "NA") {%><%= contact2 %><% } %>">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="console_contact_2" class="form-label">Contact Number 2</label>
+                                            <input type="number" class="form-control" id="console_contact_2" value = "<% if (contact2 != "NA") {%><%= contact2 %><% } %>">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="console_contact_address" class="form-label">Address</label>
+                                            <textarea type="text" class="form-control" id="console_contact_address"
+                                            aria-describedby=""><%= address %></textarea>
+    
+                                        </div>
+    
+                                        <button type="submit" id = "console_contact_btn" class="btn btn-danger bg-gradient">Change Contact
+                                            Info</button>
+                                    </form>
+                                </div>
+                                <div class="row border rounded rounded-3 border-danger p-4 m-3">
+                                    <h2>Change Motto?</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="console_motto" class="form-label">Motto</label>
+                                            <textarea type="text" class="form-control" id="console_motto"
+                                                aria-describedby=""><%= motto %></textarea>
+    
+                                        </div>
+    
+                                        <button type="submit" id = "console_motto_btn" class="btn btn-danger bg-gradient">Change Motto</button>
+                                    </form>
+                                </div>
+    
+                            </div>
+                           
+    
+    
+                            
+    
+    
+                        </div>
+    
+    
+    
+                    </div>
+                </div>
+    
+    
+            </div>
+    
+        </main>
+
+    <%- include("partials/footer",{contact1:contact1,contact2:contact2,email:email,address:address}); -%>
+
+    <%- include("partials/tail"); -%>
+    <script src = "/javascripts/console.js"></script>
+
+  </body>
+
+</html>

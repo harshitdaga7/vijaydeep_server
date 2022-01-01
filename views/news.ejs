@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+  <%- include("partials/head"); -%>
+
+  <body>
+    <%- include("partials/navbar",{role:role,contact1:contact1,contact2:contact2,email:email}); -%>
+
+        <!-- Main content -->
+    <main>
+        <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url('/images/office2.jpg'); background-repeat: no-repeat; background-size: cover ;">
+            <div class="col-md-6 px-0">
+              <h1 class="display-4 fst-italic">Learn about our most recent development</h1>
+              <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+                 </div>
+          </div>
+        <div class="container-fluid" id = "news_container">
+            <div class="row m-5 border  rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
+            
+                
+                <div class="col-md-12 col-sm-12 col-lg-3 position-sticky " >
+                    <img style="height:100% ; object-fit: cover;" src="coca-cola-bottles.jpg" class="zoom d-block w-100" alt="...">
+    
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-9 bg-light p-5" style="overflow:hidden; z-index: 50;">
+                    <h1 >Coca-Cola</h1>
+                    <p class="small">
+                        <img src="icons8-calendar-30.png" height="26px" width="auto"> 26-11-2021
+                    </p>
+                    <p style="font-size: medium;">Coca-Cola, or Coke, is a carbonated soft drink manufactured by The Coca-Cola Company. Originally marketed as a temperance drink and intended as a patent medicine, it was invented in the late 19th century by John Stith Pemberton and was bought out by businessman Asa Griggs  </p>
+                    <a href="...">//LInk for more info</a>
+    
+                </div>
+                
+    
+    
+            </div>
+    
+    
+            <div class="row m-5 border rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
+            
+                
+                
+                <div class="col-md-12 col-sm-12 col-lg-9 bg-light p-5 order-lg-0 order-1 " style="overflow:hidden; z-index: 50;">
+                    <h1 >Coca-Cola</h1>
+                    <p class="small">
+                        <img src="icons8-calendar-30.png" height="26px" width="auto"> 26-11-2021
+                    </p>
+                    <p style="font-size: medium;">Coca-Cola, or Coke, is a carbonated soft drink manufactured by The Coca-Cola Company. Originally marketed as a temperance drink and intended as a patent medicine, it was invented in the late 19th century by John Stith Pemberton and was bought out by businessman Asa Griggs  </p>
+                    <a href="...">//LInk for more info</a>
+    
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-3 position-sticky order-lg-1 order-0" >
+                    <img style=" height:100%" src="coke2.jpg" class="zoom  d-block w-100" alt="...">
+    
+                </div>
+    
+    
+            </div>
+    
+    
+        </div>
+    </main>
+
+    <%- include("partials/footer",{contact1:contact1,contact2:contact2,email:email,address:address}); -%>
+
+    <%- include("partials/tail"); -%>
+
+    <script  src = "/javascripts/news.js"></script>
+
+  </body>
+
+</html>
