@@ -525,6 +525,7 @@ router.get("/team/find/:id", async function(req,res,next){
 
         if(team)
         {
+            console.log(team)
             return res.json({success:true,data:team});
         }
         else{

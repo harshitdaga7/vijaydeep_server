@@ -8,6 +8,10 @@ a{
   word-wrap: break-word;
 }
 
+textarea{
+
+  height: 200px;
+}
 .header-color{
 
   background: rgb(145, 11, 11);
