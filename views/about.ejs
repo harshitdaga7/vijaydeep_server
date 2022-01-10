@@ -3,6 +3,7 @@
 
   <%- include("partials/head"); -%>
   <style>
+
         .img-responsive{
 
             height: 100%;
@@ -50,7 +51,7 @@
 
         .ca-btn-clr{
 
-            background-color: blue;
+            background-color: #302457;
         }
 
 
@@ -123,7 +124,7 @@
 
             </div>
             <div class="col-lg-4 text-center my-auto p-1 p-lg-2 order-last order-lg-last">
-                <img src = "/images/build.jpg" class = "img-fluid">
+                <img src = "/images/logo.png" class = "img-fluid">
             </div>
         </div>
     </div>
@@ -141,7 +142,7 @@
 
             </div>
             <div class="col-lg-4 text-center my-auto p-1 p-lg-2 order-last order-lg-first">
-                <img src = "/images/build.jpg" class = "img-fluid">
+                <img src = "/images/build.png" class = "img-fluid">
             </div>
         </div>
     </div>
@@ -155,7 +156,7 @@
             <% for( let i = 0; i < partners.length; i++ ) { %>
 
                 <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
-                    <a src = "<%= partners[i].link %>"><img src = "/images/<%= partners[i].image%>" style = "max-height: 250px; max-width: 250px;"></a>
+                   <a  href = "<%= partners[i].link %>"><img src = "/images/<%= partners[i].image%>" style = "max-height: 250px; max-width: 250px;" title="<%= partners[i].name %>" ></a>
                 </div>
         
             <% } %>
@@ -176,7 +177,7 @@
                 <% for( let i = 0; i < clients.length; i++ ) { %>
 
                     <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
-                        <a src = "<%= clients[i].link %>"><img src = "/images/<%= clients[i].image%>" style = "max-height: 250px; max-width: 250px;"></a>
+                        <a href  = "<%= clients[i].link %>"><img src = "/images/<%= clients[i].image%>" style = "max-height: 250px; max-width: 250px;" title="<%= clients[i].name %>" ></a>
                     </div>
             
                 <% } %>
@@ -197,7 +198,7 @@
         <div class = "row mx-auto my-auto justify-content-center">
             <h1 class = "title text-center p-4">Testimonials</h1>
             <div id="test-carousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" role="listbox">
+                <div class="carousel-inner" style="font-family: Georgia, 'Times New Roman', Times, serif;" role="listbox">
 
                     <% for( let i = 0; i < testimonials.length; i++ ) { %>
 
@@ -269,8 +270,27 @@
                 
                 <% for( let i = 0; i < certificates.length; i++ ) { %>
 
-                    <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
-                        <a src = "<%= certificates[i].link %>"><img src = "/images/<%= certificates[i].image%>" style = "max-height: 250px; max-width: 250px;"></a>
+                    <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center m-4">
+                        
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#seecerti_<%= certificates[i].id %>"  style="background-color: transparent;"><img src = "/images/<%= certificates[i].image%> " title="<%= certificates[i].name %>" style = "max-height: 250px; max-width: 250px; "></button>
+
+                        <div class="modal fade " id="seecerti_<%= certificates[i].id %>" tabindex="-1" aria-labelledby="seecerti_<%= certificates[i].id %>Label" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+                                <div class="modal-content">
+                                   
+                                    <div class="modal-body">
+                                        <img src = "/images/<%= certificates[i].image%>" style = "max-width:100%;" title="<%= certificates[i].name %>" >
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" 
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    
                     </div>
                 <% } %>
                 <!-- <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
