@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var contactController = require('../controller/contact')
 var mottoController = require('../controller/motto')
+var aboutusController = require('../controller/aboutus')
 
 
 // getting contact_data
@@ -47,6 +48,31 @@ async function get_motto_content()
 
 }
 
+async function get_about()
+{
+  var temp_data = await aboutusController.find_all_about_()
+
+  if(temp_data)
+  {
+      let result = {
+
+        aboutus: temp_data.aboutus,
+        philosophy:temp_data.philosophy
+      }
+
+      return result
+  }
+  else{
+
+    let result = {
+      aboutus:"NA",
+      philosophy:"NA"
+    }
+
+    return result;
+  }
+}
+
 router.get('/', async function(req, res, next) {
     // res.status(404);
 
@@ -85,13 +111,16 @@ router.get('/console_about', async function(req, res, next) {
     {
         var contact_data = await get_contact_data();
         var motto_data = await get_motto_content();
+        var aboutus_data = await get_about();
         console.log(contact_data);
         var data = {role:req.headers.role,
             contact1:contact_data.contact1,
             contact2:contact_data.contact2,
             email:contact_data.email,
             address:contact_data.address,
-            motto:motto_data.content
+            motto:motto_data.content,
+            aboutus : aboutus_data.aboutus,
+            philosophy: aboutus_data.philosophy
         }
         res.render('console_about', data);
     }

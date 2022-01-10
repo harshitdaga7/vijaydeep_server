@@ -17,13 +17,11 @@
                         <form>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">About us</label>
-                                <textarea type="text" class="form-control" id="exampleaboutus"
-                                    aria-describedby="">
-                          </textarea>
+                                <textarea type="text" class="form-control" id="about_aboutus_input" aria-describedby="" value = "<%= aboutus %>"><%= aboutus %></textarea>
     
                             </div>
     
-                            <button type="submit" class="btn btn-danger bg-gradient">Change about us</button>
+                            <button type="button" class="btn btn-danger bg-gradient" id = "aboutus_form_submit">Change about us</button>
                         </form>
                        
                     </div>
@@ -35,13 +33,10 @@
                         <form>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Our Philosophy</label>
-                                <textarea type="text" class="form-control" id="exampleOurPhilosophy"
-                                    aria-describedby="">
-                          </textarea>
-    
+                                <textarea type="text" class="form-control" id="about_philosophy_input"aria-describedby="" value = "<%= philosophy %>"><%= philosophy %></textarea>
                             </div>
     
-                            <button type="submit" class="btn btn-danger bg-gradient">Change Our Philosophy</button>
+                            <button type="button" class="btn btn-danger bg-gradient" id = "philosophy_form_submit">Change Our Philosophy</button>
                         </form>
                        
                     </div>
@@ -55,11 +50,11 @@
                             <!-- image view -->
                             <div class="row">
     
-                                <img class="img-fluid" src="/images/image.jpg">
+                                <img class="img-fluid" id = "partner_image_preview" src="/images/image.jpg">
                                 <div class="mt-3">
                                     <div class="mb-3 ">
                                         <label for="PLogo">Choose Partner Logo</label>
-                                        <input type="file" id="PLogo" name="PLogo" accept="image/png, image/jpeg">
+                                        <input type="file" id="partner_image_input" name="partner" onchange = "preview(this.name)" accept="image/*">
                                     </div>
                                 </div>
     
@@ -68,20 +63,16 @@
     
                             <div class="mb-3">
                                 <label for="exampleInputPartner" class="form-label">Partner Name</label>
-                                <input type="text" class="form-control" id="exampleInputPartner" aria-describedby="">
+                                <input type="text" class="form-control" id="partner_name_input" aria-describedby="">
     
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputLink" class="form-label">additional Link</label>
-                                <input type="text" class="form-control" id="exampleInputLink" aria-describedby="">
+                                <input type="text" class="form-control" id="partner_link_input" aria-describedby="">
     
                             </div>
     
-    
-    
-    
-    
-                            <button type="submit" class="btn btn-danger bg-gradient my-4">Add New Partner</button>
+                            <button id = "partner_form_submit" type = "button" class = "btn btn-danger bg-gradient my-4"> New Partner</button>
                         </form>
                     </div>
     
@@ -91,7 +82,7 @@
                         <h2>Update Partner?</h2>
     
     
-                        <div class="list-group shadow-lg overflow-auto" style="max-height: 600px;">
+                        <div class="list-group shadow-lg overflow-auto" id = "partner_container" style="max-height: 600px;">
     
                             <!-- Update-Card -->
                             <div class="list-group-item list-group-item-action d-flex gap-3 py-3 content-hover-red"
@@ -127,11 +118,11 @@
                             <!-- image view -->
                             <div class="row">
     
-                                <img class="img-fluid" src="/images/image.jpg">
+                                <img class="img-fluid" id = "client_image_preview" src="/images/image.jpg">
                                 <div class="mt-3">
                                     <div class="mb-3 ">
                                         <label for="CLogo">Choose Client Logo</label>
-                                        <input type="file" id="CLogo" name="CLogo" accept="image/png, image/jpeg">
+                                        <input type="file" id="client_image_input" name="client" onchange="preview(this.name)"accept="image/*">
                                     </div>
                                 </div>
     
@@ -140,12 +131,12 @@
     
                             <div class="mb-3">
                                 <label for="exampleInputPartner" class="form-label">Client Name</label>
-                                <input type="text" class="form-control" id="exampleInputPartner" aria-describedby="">
+                                <input type="text" class="form-control" id="client_name_input" aria-describedby="">
     
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputLink" class="form-label">additional Link</label>
-                                <input type="text" class="form-control" id="exampleInputLink" aria-describedby="">
+                                <input type="text" class="form-control" id="client_link_input" aria-describedby="">
     
                             </div>
     
@@ -153,7 +144,7 @@
     
     
     
-                            <button type="submit" class="btn btn-danger bg-gradient my-4">Add New Client</button>
+                            <button id = "client_form_submit" type="button" class="btn btn-danger bg-gradient my-4">New Client</button>
                         </form>
                     </div>
     
@@ -163,7 +154,7 @@
                         <h2>Update Client?</h2>
     
     
-                        <div class="list-group shadow-lg overflow-auto" style="max-height: 600px;">
+                        <div class="list-group shadow-lg overflow-auto" id = "client_container" style="max-height: 600px;">
     
                             <!-- Update-Card -->
                             <div class="list-group-item list-group-item-action d-flex gap-3 py-3 content-hover-red"
@@ -199,12 +190,12 @@
     
                             <div class="mb-3">
                                 <label for="exampleInputTestemonials" class="form-label">Testimonial</label>
-                                <input type="text" class="form-control" id="exampleInputTestemonials" aria-describedby="">
+                                <textarea type="text" class="form-control" id="testimonial_message_input" aria-describedby=""></textarea>
     
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputAuthor" class="form-label">Author</label>
-                                <input type="text" class="form-control" id="exampleInputAuthor" aria-describedby="">
+                                <input type="text" class="form-control" id="testimonial_author_input" aria-describedby="">
     
                             </div>
     
@@ -212,7 +203,7 @@
     
     
     
-                            <button type="submit" class="btn btn-danger bg-gradient my-4">Add New Testimonial</button>
+                            <button id = "testimonial_form_submit" type="button" class="btn btn-danger bg-gradient my-4">>Add New Testimonial</button>
                         </form>
                     </div>
     
@@ -222,7 +213,7 @@
                         <h2>Update Testimonials?</h2>
     
     
-                        <div class="list-group shadow-lg overflow-auto" style="max-height: 300px;">
+                        <div class="list-group shadow-lg overflow-auto" id = "testimonial_container" style="max-height: 300px;">
     
                             <!-- Update-Card -->
                             
@@ -239,16 +230,7 @@
                                 </div>
                                 <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#deleteTestimonialModal"></button>
                             </div>
-                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
+                                
                         </div>
                     </div>
                 </div>
@@ -261,11 +243,11 @@
                             <!-- image view -->
                             <div class="row">
     
-                                <img class="img-fluid" src="/images/image.jpg">
+                                <img class="img-fluid" id = "certificate_image_preview" src="/images/image.jpg">
                                 <div class="mt-3">
                                     <div class="mb-3 ">
                                         <label for="Certificates">Choose Certificates img</label>
-                                        <input type="file" id="CLogo" name="Certificates" accept="image/png, image/jpeg">
+                                        <input type="file" id="certificate_image_input" name="certificate" onchange="preview(this.name)" accept="image/*">
                                     </div>
                                 </div>
     
@@ -274,12 +256,12 @@
     
                             <div class="mb-3">
                                 <label for="exampleInputCertificates" class="form-label">Certificates Name</label>
-                                <input type="text" class="form-control" id="exampleInputCertificates" aria-describedby="">
+                                <input type="text" class="form-control" id="certificate_name_input" aria-describedby="">
     
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputLink" class="form-label">additional Link</label>
-                                <input type="text" class="form-control" id="exampleInputLink" aria-describedby="">
+                                <input type="text" class="form-control" id="certificate_link_input" aria-describedby="">
     
                             </div>
     
@@ -287,7 +269,7 @@
     
     
     
-                            <button type="submit" class="btn btn-danger bg-gradient my-4">Add New Certificates</button>
+                            <button id = "certificate_form_submit" type="button" class="btn btn-danger bg-gradient my-4">>Add New Certificates</button>
                         </form>
                     </div>
     
@@ -297,7 +279,7 @@
                         <h2>Update Certificates?</h2>
     
     
-                        <div class="list-group shadow-lg overflow-auto" style="max-height: 600px;">
+                        <div class="list-group shadow-lg overflow-auto" id = "certificate_container" style="max-height: 600px;">
     
                             <!-- Update-Card -->
                             <div class="list-group-item list-group-item-action d-flex gap-3 py-3 content-hover-red"
@@ -553,15 +535,15 @@
 
 
         <!--Delete partner modal-->
-        <div class="modal fade " id="deletePartnerModal" tabindex="-1" aria-labelledby="deletePartnerModalLabel" aria-hidden="true">
+        <div class="modal fade " id="deletepartnerModal" tabindex="-1" aria-labelledby="deletepartnerModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="deletePartnerModalLabel">Confirm Delete ?</h5>
+                        <h5 class="modal-title" id="deletepartnerModalLabel">Confirm Delete ?</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <span class="text-secondary" style="font-size: 15px;"> Are you sure you want to Delete: <blue class="text-primary">Partner</blue> ? </span>
+                        <span class="text-secondary" style="font-size: 15px;"> Are you sure you want to Delete: <blue class="text-primary">partner</blue> ? </span>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" 
@@ -572,16 +554,16 @@
             </div>
         </div>
     
-           <!--Delete Client modal-->
-        <div class="modal fade " id="deleteClientModal" tabindex="-1" aria-labelledby="deleteClientModalLabel" aria-hidden="true">
+           <!--Delete client modal-->
+        <div class="modal fade " id="deleteclientModal" tabindex="-1" aria-labelledby="deleteclientModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="deleteClientModalLabel">Confirm Delete ?</h5>
+                        <h5 class="modal-title" id="deleteclientModalLabel">Confirm Delete ?</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <span class="text-secondary" style="font-size: 15px;"> Are you sure you want to Delete: <blue class="text-primary">Client</blue> ? </span>
+                        <span class="text-secondary" style="font-size: 15px;"> Are you sure you want to Delete: <blue class="text-primary">client</blue> ? </span>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" 
@@ -593,15 +575,15 @@
         </div>
     
            <!--Delete Testimonal modal-->
-        <div class="modal fade " id="deleteTestimonialModal" tabindex="-1" aria-labelledby="deleteTestimonialModalLabel" aria-hidden="true">
+        <div class="modal fade " id="deletetestimonialModal" tabindex="-1" aria-labelledby="deletetestimonialModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="deleteTestimonialModalLabel">Confirm Delete ?</h5>
+                        <h5 class="modal-title" id="deletetestimonialModalLabel">Confirm Delete ?</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <span class="text-secondary" style="font-size: 15px;"> Are you sure you want to Delete: <blue class="text-primary">Testimonial</blue> ? </span>
+                        <span class="text-secondary" style="font-size: 15px;"> Are you sure you want to Delete: <blue class="text-primary">testimonial</blue> ? </span>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" 
@@ -613,7 +595,7 @@
         </div>
     
            <!--Delete Certificate modal-->
-        <div class="modal fade " id="deleteCertificateModal" tabindex="-1" aria-labelledby="deleteCertificateModalLabel" aria-hidden="true">
+        <div class="modal fade " id="deletecertificateModal" tabindex="-1" aria-labelledby="deleteCertificateModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -635,6 +617,8 @@
     <%- include("partials/footer",{contact1:contact1,contact2:contact2,email:email,address:address}); -%>
 
     <%- include("partials/tail"); -%>
+
+    <script src = "/javascripts/console_about.js"></script>
 
   </body>
 

@@ -20,7 +20,91 @@
         <!-- Main content -->
         <main>
         <div class=" container-fluid"  >
-            <div class="row m-5 border  rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
+
+
+          <% for( let i = 0; i < products.length; i++ ) { %>
+
+            <% if( i%2==0){ %>
+
+              <div class="row m-5 border  rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
+            
+                
+                <div class="col-md-12 col-sm-12 col-lg-9 position-sticky" >
+                    <div id="carouselExampleSlidesOnly" class="zoom carousel slide" data-bs-ride="carousel" style=" height:100%">
+                        <div class="carousel-inner" style=" height:100%">
+                          <div class="carousel-item active" style=" height:100%" >
+                            <img style="height:100% ; object-fit: cover;"  src="/images/<%= products[i].image1%>" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item" style=" height:100%">
+                            <img style="height:100% ; object-fit: cover;" src="/images/<%= products[i].image1%>" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item" style=" height:100%">
+                            <img style="height:100% ; object-fit: cover;" src="/images/<%= products[i].image1%>" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+    
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-3 bg-light p-3" style="overflow:hidden; z-index: 50;">
+                    <h1 ><%= products[i].name%></h1>
+                    <p class="small">
+                        <img src="/images/icons8-calendar-30.png" height="26px" width="auto"> <%= products[i].createdAt%>
+                    </p>
+                    <p style="font-size: medium;"><%= products[i].description%></p>
+                    <a href="<%= products[i].link%>"><%= products[i].link%></a>
+    
+                </div>
+                
+    
+    
+            </div>
+
+             <% }else{ %>
+
+
+              <div class="row m-5 border rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
+            
+                
+                
+                <div class="col-md-12 col-sm-12 col-lg-3 bg-light p-3 order-lg-0 order-1 " style="overflow:hidden; z-index: 50;">
+                    <h1 ><%= products[i].name%></h1>
+                    <p class="small">
+                        <img src="/images/icons8-calendar-30.png" height="26px" width="auto"> <%= products[i].createdAt%>
+                    </p>
+                    <p style="font-size: medium;"><%= products[i].description%></p>
+                    <a href="<%= products[i].link%>"><%= products[i].link%></a>  
+              </div>
+
+                <div class="col-md-12 col-sm-12 col-lg-9 position-sticky order-lg-1 order-0  " >
+                    <div id="carouselExampleSlidesOnly" class="zoom carousel slide" data-bs-ride="carousel" style=" height:100%">
+                        <div class="carousel-inner" style=" height:100%">
+                          <div class="carousel-item active" style=" height:100%" >
+                            <img style="height:100% ; object-fit: cover;" src="/images/<%= products[i].image1%>" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item" style=" height:100%">
+                            <img style="height:100% ; object-fit: cover;" src="/images/<%= products[i].image2%>" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item" style=" height:100%">
+                            <img style="height:100% ; object-fit: cover;" src="/images/<%= products[i].image3%>" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+    
+                </div>
+    
+    
+            </div>
+
+
+                
+              <% } %>
+
+
+    
+        <% } %> 
+
+
+            <!-- <div class="row m-5 border  rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
             
                 
                 <div class="col-md-12 col-sm-12 col-lg-9 position-sticky" >
@@ -85,7 +169,7 @@
                 </div>
     
     
-            </div>
+            </div> -->
     
     
         </div>

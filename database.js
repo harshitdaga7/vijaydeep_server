@@ -29,13 +29,12 @@ async function test_connection()
 
 try {
 
-    test_connection().then(()=>{console.log("Connection has been established successfully.")}).catch(err=>console.log(err))
-    
+    test_connection().then(()=>{console.log("Connection has been established successfully.")}).catch(err=>console.log("error occured",err))
     
 } 
 catch (error) 
 {
-    console.error('Unable to connect to the database:', error);
+    console.log('Unable to connect to the database:', error);
 }
 
 /// exporting the connected object
