@@ -3,17 +3,19 @@
 
     <div class="row align-items-center">
         <div class="col-lg-6 p-3  text-center text-sm-center text-md-center text-lg-start pb-3">
-            <a href="/"><img src="/images/logo_1.png" height="72px"></a>
+            <a href="/"><img src="/images/logo.png" height="72px"></a>
         </div>
         <div class="col-lg-3 text-center border border-start-0 pt-2 pb-2">
-            <div> <img src="/images/icons8-phone-ringing.gif" height="24px" width="24px"> &nbsp;<a href="tel:+91<%= contact1 %>"
-                    class="link-danger"><%= contact1 %></a> &nbsp|&nbsp <a href="tel:+91<%= contact2 %>" class="link-danger"><%= contact2 %></a>
+            <div> <img src="/images/icons/phone.png" height="24px" width="24px"> &nbsp;
+                <a href="tel:+91<%= contact1 %>" style = "color:rgba(47,35,134,255); font-weight: 500; text-decoration: none;" ><%= contact1 %></a> 
+                &nbsp|&nbsp 
+                <a href="tel:+91<%= contact2 %>" style = "color:rgba(47,35,134,255);font-weight: 500; text-decoration: none;"><%= contact2 %></a>
             </div>
         </div>
 
         <div class="col-lg-3 text-center pt-2 pb-2 border border-end-0">
-            <div> <img src="/images/icons8-gmail-logo.gif" height="24px" width="24px"> &nbsp; 
-                <a href="mailto:<%= email %>" class="link-danger"><%= email %></a>
+            <div> <img src="/images/icons/mail.png" height="24px" width="24px"> &nbsp; 
+                <a href="mailto:<%= email %>" style = "color:rgba(47,35,134,255); font-weight: 500; text-decoration: none;" ><%= email %></a>
             </div>
         </div>
 
@@ -25,8 +27,7 @@
 </div>
 
 <!-- Navbar -->
-<nav style="color: white;
-text-shadow: 2px 2px 4px #000000;" class="navbar navbar-expand-lg header-color navbar-dark shadow-lg fs-5 sticky-top ">
+<nav style="color: white;" class="navbar navbar-expand-lg header-color navbar-dark shadow-lg fs-5 sticky-top ">
 
     <div class="container-fluid">
 
@@ -100,12 +101,12 @@ text-shadow: 2px 2px 4px #000000;" class="navbar navbar-expand-lg header-color n
             <!-- <button class="btn btn-outline-light shadow-lg " type="submit">Login</button> -->
 
             <% if (role >= 1) { %>
-                <button type="button" id = "login_button" class="btn btn-outline-light shadow-lg " data-bs-toggle="modal" data-bs-target="#logoutModal">
-                    logout
+                <button type="button" id = "login_button" class="btn" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                    Logout
                 </button>
             <% } else { %>
-                <button type="button" id = "login_button" class="btn btn-outline-light shadow-lg " data-bs-toggle="modal" data-bs-target="#loginModal">
-                    login
+                <button type="button" id = "login_button" class="btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Login
                 </button>
             <% }%>
 

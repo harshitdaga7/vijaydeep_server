@@ -12,9 +12,29 @@ textarea{
 
   height: 200px;
 }
+
+.btn{
+  
+  background:#d35b66;
+}
+
+#login_button{
+
+  background: transparent;
+  color:white;
+  border:2px solid white;
+  border-radius: 2px;
+}
+
+#login_button:hover{
+
+  color:black;
+  background: white;
+
+}
 .header-color{
 
-  background: rgb(145, 11, 11);
+  background: #971628;
   
 
 

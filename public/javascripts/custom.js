@@ -75,7 +75,7 @@ function make_border_current_page()
     // var my_style = `  border-bottom: 2px solid rgb(252, 252, 252);
     // border-top:2px solid rgb(255, 255, 255);  `
 
-    var my_style = `background:rgb(100, 8, 8);`
+    var my_style = `background:#302457`
 
     if(path == "")
     {
