@@ -27,30 +27,26 @@
 
                     <div style="margin: 5%;"> <img src="icons8-phone-ringing.gif" height="36px" width="auto">
                         &nbsp;<a href="tel:+91<%= contact1 %>" class="link-danger"
-                            style=" font-size: 1.5pc; color:rgb(17, 17, 17) ; text-decoration: none;"><%= contact1 %>
-                            /</a> <a href="tel:+91<%= contact2 %> " class="link-danger"
                             style=" font-size: 1.5pc; color:rgb(17, 17, 17) ; text-decoration: none;">
-                            <%= contact2 %></a>
+                            <%= contact1 %>
+                                /
+                        </a> <a href="tel:+91<%= contact2 %> " class="link-danger"
+                            style=" font-size: 1.5pc; color:rgb(17, 17, 17) ; text-decoration: none;">
+                            <%= contact2 %>
+                        </a>
                     </div>
 
                     <div> <img src="icons8-gmail-logo.gif" height="36px" width="auto"> &nbsp; <a
                             href="mailto:<%= email %>" class="link-danger"
-                            style="font-size: 1.5pc; color:rgb(17, 17, 17) ; text-decoration: none;"><%= email %></a>
+                            style="font-size: 1.5pc; color:rgb(17, 17, 17) ; text-decoration: none;">
+                            <%= email %>
+                        </a>
                     </div>
 
 
                 </div>
 
-
-
-
-
-
-
-
-
-
-
+                <iframe name="hiddenFrame" class="hide" style="display:none"></iframe>
 
 
                 <div style="margin-top: 5%;"
@@ -58,6 +54,7 @@
 
                     <h1 style=" text-align: center; margin-bottom: 5% " class="text-light align-self-center">
                         <strong>Contact Us</strong>
+                        
 
 
                         <!-- <img src = "icons8-location.gif" height="36px" width="36px">  -->
@@ -66,19 +63,29 @@
                     <div class="row justify-content-center align-items-center position-relative">
                         <div class="col p-0"><iframe allowfullscreen="" frameborder="0"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609591992!2d72.74110205851967!3d19.082197841169613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1639309178027!5m2!1sen!2sin"
-                                width="100%" height="700" style="filter: grayscale(100%);opacity: 0.50;"></iframe>
+                                width="100%" height="1000" style="filter: grayscale(100%);opacity: 0.50;"></iframe>
                         </div>
-                        <div class="col-md-6 col-lg-5 col-xl-4 position-absolute">
-                            <form class="bg-white shadow-sm p-4 rounded" method="post">
+                        <div class="col-md-6 col-lg-5 col-xl-4 position-absolute" >
+                            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScACWPrjhvtKsoVyFT_He2Gp5aNpNNVOodSk2aybsuqltwl6Q/formResponse" target="hiddenFrame" class="bg-white shadow-sm p-4 rounded" method="post">
                                 <div>
                                     <h4>Leave us a Message</h4>
                                     <p class="text-muted">How do feel about our new website? Do you Something from
                                         us?<br></p>
                                 </div>
-                                <div class="mb-3"><label class="form-label">Email</label><input class="form-control"
-                                        type="email" required=""></div>
+                                <div class="mb-3">
+                                    <label class="form-label">Name</label>
+                                    <input class="form-control" type="text" name="entry.2013309438" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input class="form-control" type="email" name="entry.1252195334" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Contact No.</label>
+                                    <input class="form-control" type="text" name="entry.839376617" required>
+                                </div>
                                 <div class="mb-4"><label class="form-label">Message</label><textarea
-                                        class="form-control" required="" rows="4"></textarea></div>
+                                        class="form-control" required="" rows="4" name="entry.833926264"></textarea></div>
                                 <div><button style="color: white;
                     text-shadow: 2px 2px 4px #000000; margin-left: 5px;
       margin-right: 5px; min-width: fit-content; " class="btn btn-primary w-100 mb-2 btn btn-danger"
