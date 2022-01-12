@@ -61,8 +61,66 @@ function index_news_handle()
     .catch(error => console.log('error', error));
 }
 
+function index_product_handle()
+{
+    
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+        };
+    
+        fetch("/api/product/all", requestOptions)
+        .then((response) => response.json())
+        .then((result) => {
+    
+            if(result.success)
+            {
+                
+                // console.log(localStorage.getItem('token'))
+                var products_body = document.getElementById('products_body')
+                var l = Math.min(5,result.data.length);
+                var cont = ""
+                for(let i = 0;i<l;i++)
+                {
+                    let img = "NA";
+
+                    if(result.data[i].image3 != "NA") img = result.data[i].image3;
+                    if(result.data[i].image2 != "NA") img = result.data[i].image2;
+                    if(result.data[i].image1 != "NA") img = result.data[i].image1;
+
+                    let d = 
+                    `
+                    
+                        <div class="col-12 mb-4">
+                        
+                            <div class="card shadow-lg content-hover-red">
+                            <a href = "/products/#product_${result.data[i].id}" class ="stretched-link"><img loading = "lazy" src="/images/${img}" height="300px" class="card-img-top" alt="NA"> </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">${result.data[i].name}</h5>
+                                    <p class="card-text">${result.data[i].description}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    `
+    
+                    cont += d;
+                    
+                }
+    
+                products_body.innerHTML = cont;
+            }
+            else
+            {
+                alert(result.message)
+            }
+            
+        })
+        .catch(error => console.log('error', error));
+}
 
 
 // call function
 
 index_news_handle()
+index_product_handle();
