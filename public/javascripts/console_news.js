@@ -28,13 +28,12 @@ function load_news_cards()
                             <div class="list-group-item list-group-item-action d-flex gap-3 py-3 content-hover-red" aria-current="true">
 
 
-                                <div style="max-height:100px; max-width:100px; overflow: hidden;"
-                                    class="ratio ratio-1x1 shadow mx-auto">
-                                    <img loading="lazy" style = "max-height:200px;max-width:200px" src="/images/${result.data[i].image}">
+                                <div style="height: 108px;width: 192px; overflow:hidden;  display: flex; align-items: center; justify-content: center;" class="shadow ">
+                                    <img loading="lazy" style = " max-width: 224px;" src="/images/${result.data[i].image}">
                                 </div>
 
                                 <div class="d-flex gap-2 w-100 justify-content-between">
-                                    <button type="button" id = "btn_${result.data[i].id}" class="btn text-start" onclick = "load_update(this.id)">
+                                    <button style="background-color: transparent " type="button" id = "btn_${result.data[i].id}" class="btn text-start" onclick = "load_update(this.id)">
                                         <h5 class="mb-0 my-2">${result.data[i].headline}</h5>
                                         <p class="mt-2 mb-0 opacity-75">${result.data[i].updatedAt}</p>
                                     </button>
@@ -188,8 +187,9 @@ function load_update(btn_id)
 
                         <!-- image view -->
                         <div class="row">
-                            
-                                <img class="img-fluid" style = "max-height:300px;max-width:300px;" loading="lazy" id= "update_image_preview" src="/images/${result.data.image}">
+                        <div style="height:108px;width: 192px; overflow:hidden;  display: flex; align-items: center; justify-content: center;" class="shadow-lg mx-3" >
+                                <img class=" " style = "max-width:224px;" loading="lazy" id= "update_image_preview" src="/images/${result.data.image}">
+                        </div>
                                 <div class="mt-3">
                                     <div class="mb-3 ">
                                         <label for="update_image_input">Choose Article Img</label>

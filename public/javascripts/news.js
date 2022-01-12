@@ -27,20 +27,28 @@ function handle_news()
                     {
                         let d = `
                         
-                        <div class="row m-5 border  rounded-3 border-1 shadow-lg " id="news_${result.data[i].id}" style="overflow:hidden;">
+                        <div class="row m-5 border  rounded-3 border-1 shadow-lg " id="news_${result.data[i].id}" >
             
                 
-                            <div class="col-md-12 col-sm-12 col-lg-3 position-sticky " >
-                                <img loading="lazy" style="height:100%;object-fit: cover;" src="/images/${result.data[i].image}" class="zoom d-block w-100" alt="NA">
-                
+                            <div class="col-md-12 col-sm-12 col-lg-3 bg-light position-sticky pt-3 pl-5 " style="display: flex;
+                            align-items: center;
+                            justify-content: center;">
+                             <div style=" height: 144px;
+                             width: 256px;
+                           overflow:hidden;
+                           display: flex;
+                           align-items: center;
+                           justify-content: center;" class="my-auto mx-auto border border-5 " >   
+                            <img loading="lazy" style="max-width:238px; min-width:256px" src="/images/${result.data[i].image}" class="zoom d-block w-100" alt="NA">
+                            </div>
                             </div>
                             <div class="col-md-12 col-sm-12 col-lg-9 bg-light p-5" style="overflow:hidden; z-index: 50;">
                                 <h1 >${result.data[i].headline}</h1>
                                 <p class="small">
-                                    <img src="icons8-calendar-30.png" height="26px" width="auto"> ${result.data[i].updatedAt}
+                                    <img src="/images/icons/icons8-calendar-30.png" height="26px" width="auto"> ${result.data[i].updatedAt}
                                 </p>
-                                <p style="font-size: medium;">${result.data[i].article}</p>
-                                <a href="${result.data[i].link}">${result.data[i].link}</a>
+                                <p style="font-size: medium; ">${result.data[i].article}</p>
+                                <a style="color: #2f2481; font-size: small " href="${result.data[i].link}">Check out this link</a>
                 
                             </div>
                         
@@ -57,19 +65,27 @@ function handle_news()
                         let d = `
                     <div class="row m-5 border rounded-3 border-1 shadow-lg" id = "news_${result.data[i].id}" style="overflow:hidden; " >
                             
-                        <div class="col-md-12 col-sm-12 col-lg-9 bg-light p-5 order-lg-0 order-1 " style="overflow:hidden; z-index: 50;">
-                            <h1>${result.data[i].headline}</h1>
-                            <p class="small">
-                                <img src="icons8-calendar-30.png" height="26px" width="auto"> ${result.data[i].updatedAt}
-                            </p>
-                            <p style="font-size: medium;">${result.data[i].article}</p>
-                            <a href="${result.data[i].link}">${result.data[i].link}</a>
-            
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-lg-3 position-sticky order-lg-1 order-0" >
-                            <img style=" height:100%" src="/images/${result.data[i].image}" class="zoom  d-block w-100" alt="NA">
-            
-                        </div>
+                    <div class="col-md-12 col-sm-12 col-lg-9 bg-light p-5" style="overflow:hidden; z-index: 50;">
+                    <h1 >${result.data[i].headline}</h1>
+                    <p class="small">
+                        <img src="/images/icons/icons8-calendar-30.png" height="26px" width="auto"> ${result.data[i].updatedAt}
+                    </p>
+                    <p style="font-size: medium; ">${result.data[i].article}</p>
+                    <a style="color: #2f2481; font-size: small " href="${result.data[i].link}">Check out this link</a>
+                    </div>
+
+                        <div class="col-md-12 col-sm-12 col-lg-3 bg-light position-sticky pb-3 pr-5 " style="display: flex;
+                            align-items: center;
+                            justify-content: center;">
+                             <div style=" height: 144px;
+                             width: 256px;
+                           overflow:hidden;
+                           display: flex;
+                           align-items: center;
+                           justify-content: center;" class="my-auto mx-auto border border-5 " >   
+                            <img loading="lazy" style="max-width:238px; min-width:256px" src="/images/${result.data[i].image}" class="zoom d-block w-100" alt="NA">
+                            </div>
+                            </div>
             
             
                     </div>
