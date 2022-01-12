@@ -27,11 +27,24 @@ async function find_one_(conditions)
     /**
      * conditions look in sequelize
      * conditions : {title : my_title  , name : my_name}
+     * 
+     * 
      */
 
-    const user = await User.findOne({where:conditions})
+    try{
 
-    return user;
+        const user = await User.findOne({where:conditions})
+
+        if(user) return user;
+
+        return false;
+
+    }
+    catch(e)
+    {
+        return false;
+    }
+
 }
 
 async function find_all_()

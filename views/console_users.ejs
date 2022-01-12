@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+  <%- include("partials/head"); -%>
+
+  <body>
+    <%- include("partials/navbar",{role:role,contact1:contact1,contact2:contact2,email:email}); -%>
+
+        <!-- Main content -->
+        <main>
+            <div class="container">
+                <div class="row border rounded rounded-3 shadow-lg my-3">
+                    <div class="col-sm-12 col-md-12 col-lg-8 p-5 ">
+
+                        <form>
+                            <h1> Add new User</h1>
+                            <hr>
+                            <div class="mb-3">
+                                <label for="user_email_input" class="form-label">user email</label>
+                                <input type="email" class="form-control" id="user_email_input"
+                                    aria-describedby="emailHelp" required>
+                                <div id="emailHelp" class="form-text">Never share your password with
+                                    anyone.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="user_password_input" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="user_password_input" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="user_password_confirm_input" class="form-label">Confirm above
+                                    Password</label>
+                                <input type="text" class="form-control" id="user_password_confirm_input" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="admin_password_input" class="form-label">Enter the Password from
+                                    which you have logged into this admin console</label>
+                                <input type="password" class="form-control" id="admin_password_input" required>
+                            </div>
+
+                            <button type="submit" id = "user_create_submit" class="btn btn-danger bg-gradient text-light">Add new
+                                user</button>
+                        </form>
+
+                        
+                    </div>
+    
+    
+                    <div class="col-sm-12 col-md-12 col-lg-4 p-3 text-center">
+    
+                        <h2>Update User </h2>
+
+                        <div id = "user_container">
+
+                            <div class="row border my-1 rounded-3 shadow-sm">
+                                <div class="col-sm-8 text-start d-grid btn-danger bg-gradient ">
+
+                                    <button type="button" class="btn" data-bs-toggle="modal"
+                                        data-bs-target="#updateUserModal">
+                                        <h5 class="my-auto text-light">User Id</h5>
+                                    </button>
+                                </div>
+                                <div class="col-sm-4 text-end my-auto">
+                                    <button type="button" class="btn-close" data-bs-toggle="modal"
+                                    data-bs-target="#userDeleteModal"></button>
+                                </div>
+                            </div>
+
+                        </div>
+        
+    
+    
+                    </div>
+    
+                </div>
+            </div>
+            </div>
+
+        </main>
+            <!-- UpdateUserr Modal -->
+
+<div class="modal fade " id="updateUserModal" tabindex="-1" aria-labelledby="updateUserModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateUserModalLabel">Update User: <blue class="text-primary">UserID
+                    </blue> ?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+
+                <form>
+                    <div class="mb-3">
+
+                        <div id="emailHelp" class="form-text">Never share your userID and password with anyone.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Confirm above Password</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Enter the Password from which you have
+                            logged into this admin console</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Update Password</button>
+                </form>
+
+
+
+
+
+                <span class="text-secondary" style="font-size: 15px;"> Are you sure you want to Update ? </span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                    data-bs-target="#usersModal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- userDelete modal -->
+
+
+
+ <div class="modal fade " id="userDeleteModal" tabindex="-1" aria-labelledby="userDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="userDeleteModalLabel">Confirm Delete ?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <span class="text-secondary" style="font-size: 15px;"> Are you sure you want to Delete :<blue class="text-primary">User</blue> ? </span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal">Cancel</button>
+                <button type="button" class="btn btn-danger bg-gradient text-light">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <%- include("partials/footer",{contact1:contact1,contact2:contact2,email:email,address:address}); -%>
+
+    <%- include("partials/tail"); -%>
+    <script src = "/javascripts/console_users.js"></script>
+
+  </body>
+
+</html>
