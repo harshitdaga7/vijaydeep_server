@@ -202,4 +202,30 @@ router.get('/console_team', async function(req, res, next) {
     }
   });
 
+  router.get('/console_users', async function(req, res, next) {
+    // res.status(404);
+
+    console.log(req.headers.role)
+
+    if(req.headers.role < 2)
+    {
+        res.redirect('/')
+    }
+    else
+    {
+        var contact_data = await get_contact_data();
+        var motto_data = await get_motto_content();
+        console.log(contact_data);
+        var data = {role:req.headers.role,
+            contact1:contact_data.contact1,
+            contact2:contact_data.contact2,
+            email:contact_data.email,
+            address:contact_data.address,
+            motto:motto_data.content
+        }
+        res.render('console_users', data);
+    }
+  });
+
+
 module.exports = router;

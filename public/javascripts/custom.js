@@ -67,6 +67,7 @@ function handleLogin(e)
 
 
 
+
 function make_border_current_page()
 {
     /// makes border around current selected page in navbar

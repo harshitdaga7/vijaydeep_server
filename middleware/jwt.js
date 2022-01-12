@@ -40,6 +40,7 @@ async function verify(req,res,next)
             if(user)
             {
                 req.headers.role = user.role;
+                req.headers.id = user.id;
             }
             else{
 
