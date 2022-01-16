@@ -37,12 +37,16 @@ function index_news_handle()
                 `<a id = "news_${result.data[i].id}" href="/news/#news_${result.data[i].id}"
                     class="list-group-item list-group-item-action d-flex gap-3 py-3 content-hover-red"
                     aria-current="true">
-                    <div class="d-flex gap-2 w-100 justify-content-between">
+                    <div class=" gap-2 w-100  justify-content-between" >
+                    <div style="height: 60px; overflow:hidden">
                         <div>
-                            <h6 class="mb-0">${result.data[i].headline}</h6>
+                            <h6 class="mb-0">${result.data[i].headline} 
+                            </h6>
+                            <small class="opacity-50 text-nowrap " style="font-size: small"> ${result.data[i].updatedAt}</small>
                             <p class="mb-0 opacity-75">${result.data[i].article}</p>
                         </div>
-                        <small class="opacity-50 text-nowrap">${result.data[i].updatedAt}</small>
+                        
+                    </div>
                     </div>
                 </a>`
 
@@ -94,8 +98,12 @@ function index_product_handle()
                         <div class="col-12 mb-4">
                         
                             <div class="card shadow-lg content-hover-red">
-                            <a href = "/products/#product_${result.data[i].id}" class ="stretched-link"><img loading = "lazy" src="/images/${img}" height="300px" class="card-img-top" alt="NA"> </a>
-                                <div class="card-body">
+                            <a href = "/products/#product_${result.data[i].id}" class ="stretched-link">
+                            <div class="ratio ratio-16x9" style="overflow:hidden">
+                            <img  loading = "lazy" src="/images/${img}" class="card-img-top" alt="NA" style="height=100%; object-fit: cover;">
+                            </div>
+                            </a>
+                                <div class="card-body" style="white-space: wrap; overflow: hidden; text-overflow: ellipsis; height:100px">
                                     <h5 class="card-title">${result.data[i].name}</h5>
                                     <p class="card-text">${result.data[i].description}</p>
                                 </div>

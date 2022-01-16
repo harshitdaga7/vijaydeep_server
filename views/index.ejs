@@ -3,7 +3,7 @@
 
   <%- include("partials/head"); -%>
 
-  <body>
+  <body >
     <%- include("partials/navbar",{role:role,contact1:contact1,contact2:contact2,email:email}); -%>
 
         <!-- Main content -->
@@ -22,7 +22,7 @@
                       aria-label="Slide 3"></button>
               </div>
   
-              <div class="carousel-inner" style="background: black; font-family: Georgia, 'Times New Roman', Times, serif;">
+              <div class="carousel-inner" style=" background: rgb(0, 0, 0); font-family: Georgia, 'Times New Roman', Times, serif;">
                   <div class="carousel-item active">
                       <div class="ratio ratio-16x9">
                           <img loading="lazy" src="/images/carousel1.jpg" class="d-block w-100 carousel-overlay" alt="...">
@@ -65,11 +65,11 @@
   
           <!-- Vijaydeep Agency small description -->
   
-          <div class="container mt-5" id = "motto-sec">
+          <div class="container mt-5 shadow-lg" id = "motto-sec">
               <div class="row">
-                  <div class="col-lg-2">
+                  <div class="col">
                   </div>
-                  <div class="container mt-5 p-5 border border-2 rounded-3 shadow-sm" style="background: rgb(252, 252, 252); display: flex; flex-direction: column;
+                  <div class="container  p-5 border border-2 rounded-3 shadow-sm" style="background-image: url(/images/endless-constellationwhite.svg); display: flex; flex-direction: column;
               align-items: center;
               justify-content: center;">
   
@@ -78,8 +78,8 @@
                       <hr style=" width: 300px; border: 0.2px solid grey; ">
                       <p class="d-flex justify-content-center; pt-4" style="color: gray;  margin-left: 5px;
                    margin-right: 5px; text-align:center"><%= motto %> </p>
-                      <button style=" color: white; margin-right: 5px; min-width: fit-content;" class="btn "> <a style="color: white; text-decoration: none;"
-                              href="/about" class=""> About us</a>
+                       <a style="color: white; text-decoration: none;"
+                              href="/about" class=""> <button style=" color: white;  margin-right: 5px; min-width: fit-content;" class="btn ">About us</button></a>
                       </button>
                   </div>
   
@@ -91,13 +91,13 @@
           <!-- Products catalogue -->
           
   
-          <div class="container-fluid mt-5  p-5 shadow-sm" style="background: #fff9e0;">
+          <div class="products_scroll container mt-5 border rounded p-5 shadow-lg" style="background-image: url(/images/endless-constellationredbig.svg)">
               <div class="row">
                   <div class="col-lg-2">
   
                   </div>
                   <div class="col-lg-8 text-center">
-                      <h1 class="mb-3"><strong>Products </strong><img loading = "lazy" src="/images/icons/icons8-cart-64.png" height="36px" width="36px"> </h1>
+                      <h1 class="mb-3 " style="color: rgb(221, 221, 221);"><strong>Products </strong><img loading = "lazy" src="/images/icons/icons8-cart-64.png" height="36px" width="36px"> </h1>
                       
                   </div>
   
@@ -187,12 +187,12 @@
   
           <!-- News -->
   
-          <div class="container mt-5 p-5 border border-2 rounded-3 shadow-sm" style="background: rgb(252, 252, 252);">
+          <div class="container mt-5 p-5 border border-2 rounded-3 shadow-sm shadow-lg" style="background-image: url(/images/endless-constellationwhite.svg)">
               <div class="row align-items-center">
                   <div class="col-lg-5 text-center">
   
                       <h1><strong>News </strong><img loading = "lazy" src="/images/icons/icons8-news-16.png" height="36px" width="36px"></h1>
-                      <p class="mb-3" style="color: gray;">Be upto date with the news of the industry</p>
+                      <p class="mb-3" style="color: rgb(0, 0, 0);">Be upto date with the news of the industry</p>
                       <button style=" color: white; margin-right: 5px; min-width: fit-content;" class="btn mb-3 "> <a style="color: white; text-decoration: none;"
                         href="/news" class=""> Read More</a>
                 </button>

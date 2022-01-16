@@ -138,3 +138,46 @@ textarea{
   align-items:center;
 }
 
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.products_scroll{
+  
+    
+}
+  .products_scroll::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .products_scroll::-webkit-scrollbar-track {
+    background: #770000; 
+  }
+   
+  /* Handle */
+  .products_scroll::-webkit-scrollbar-thumb {
+    background: rgb(53, 0, 0); 
+  }
+  
+  /* Handle on hover */
+  .products_scroll::-webkit-scrollbar-thumb:hover {
+    background: rgb(37, 0, 0); 
+  }
+  

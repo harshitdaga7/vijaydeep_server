@@ -274,7 +274,7 @@ function load_users()
                     
                     
                     <div class="row border my-1 rounded-3 shadow-sm">
-                    <div class="col-sm-8 text-start d-grid btn-danger bg-gradient ">
+                    <div class="col-sm-8 text-start d-grid  ">
 
                         <button type="button" class="btn" name = "${result.data[i]}" onclick = "load_update_users(this.name)">
                             <h5 class="my-auto text-light">${result.data[i]}</h5>
