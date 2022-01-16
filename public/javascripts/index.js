@@ -98,8 +98,12 @@ function index_product_handle()
                         <div class="col-12 mb-4">
                         
                             <div class="card shadow-lg content-hover-red">
-                            <a href = "/products/#product_${result.data[i].id}" class ="stretched-link"><img loading = "lazy" src="/images/${img}" height="300px" class="card-img-top" alt="NA"> </a>
-                                <div class="card-body">
+                            <a href = "/products/#product_${result.data[i].id}" class ="stretched-link">
+                            <div class="ratio ratio-16x9" style="overflow:hidden">
+                            <img  loading = "lazy" src="/images/${img}" class="card-img-top" alt="NA" style="height=100%; object-fit: cover;">
+                            </div>
+                            </a>
+                                <div class="card-body" style="white-space: wrap; overflow: hidden; text-overflow: ellipsis; height:100px">
                                     <h5 class="card-title">${result.data[i].name}</h5>
                                     <p class="card-text">${result.data[i].description}</p>
                                 </div>

@@ -31,29 +31,32 @@ function create_team(position = "director")
                         <div class="col-lg-6 text-center p-5" style = "height:inherit">
                             <div style=" display:flex;
                             justify-content:center;
-                            flex-direction: column;
-                            align-items:center;height:100%;" class="  border p-5 border-2 rounded-3 shadow bg-light bg-gradient">
+                            flex-direction: column; background-image: url(/images/endless-constellationwhite.svg);
+                            align-items:center;height:100%;" class="  border p-5 border-2 rounded-3 shadow ">
             
             
-                                <div style="max-width: 300px; max-height: 300px;" class="ratio ratio-1x1">
-                                    <img loading = "lazy" class="shadow mx-auto" style="border-radius: 50%; width:100%; " src="/images/${result.data[i].image}" />
+                                <div style=" display: flex;
+                                align-items: center;
+                                justify-content: center;max-height:400px; max-width:400px; border-radius: 50%; width:100%; overflow: hidden;"
+                                class="ratio ratio-1x1 shadow mx-auto">
+                                    <img loading = "lazy" class="shadow mx-auto" style=" object-fit: cover; " src="/images/${result.data[i].image}" />
                                 </div>
             
                                 <div class="mt-3">
                                     <h2>${result.data[i].name}</h2>
                                     <h5>${result.data[i].position}</h5>
-                                    <h4 style="font-size: medium; white-space:pre;">${result.data[i].bio}</h4>
+                                    <h4 style="font-size: medium; white-space:pre-wrap;">${result.data[i].bio}</h4>
             
                                     <hr>
                                     <div style="margin: 5%;"> 
-                                        <img src="/images/icons8-phone-ringing.gif" height="26px" width="auto">
+                                        <img src="/images/icons/icons8-phone-ringing.png" height="26px" width="auto">
                                             &nbsp;
                                             <a href="tel:+91${result.data[i].contact1}" class="link-danger" style=" font-size: 0.75pc; color:rgb(17, 17, 17) ; text-decoration: none;">${result.data[i].contact1}</a> 
                                             |
                                             <a href="tel:+91${result.data[i].contact2}" class="link-danger" style=" font-size: 0.75pc; color:rgb(17, 17, 17) ; text-decoration: none;">${result.data[i].contact2}</a>
                                     </div>
             
-                                    <div style="margin: 5%;"> <img src="/images/icons8-gmail-logo.gif" height="26px" width="auto">
+                                    <div style="margin: 5%;"> <img src="/images/icons/icons8-gmail-logo.png" height="26px" width="auto">
                                         &nbsp; 
                                         <a href="mailto:${result.data[i].email}" class="link-danger"
                                             style="font-size: 0.75pc; color:rgb(17, 17, 17) ; text-decoration: none;">${result.data[i].email}</a>
@@ -83,19 +86,25 @@ function create_team(position = "director")
                         let d = `
 
                         <div class="col-md-6 col-lg-4 text-center p-5 " style = "height:inherit">
-                        <div style="display:flex;justify-content:center;flex-direction: column; align-items:center;height:100%;" class="  border p-5 border-2 rounded-3 shadow  bg-light bg-gradient">
-                            <div style="max-height:300px; max-width:300px;" class="ratio ratio-1x1">
-                                <img class="shadow mx-auto" style=" border-radius: 50%; width:100%;" src="/images/${result.data[i].image}" />
+                        <div style="display:flex;justify-content:center;flex-direction: column; align-items:center;height:900px;  background-image: url(/images/endless-constellationwhite.svg);" class="  border p-5 border-2 rounded-3 shadow ">
+                             <div style=" display: flex;
+                            align-items: center;
+                            justify-content: center;max-height:400px; max-width:400px; border-radius: 50%; width:100%; overflow: hidden;"
+                            class="ratio ratio-1x1 shadow mx-auto">
+                                <img class="shadow mx-auto" style="object-fit:cover" src="/images/${result.data[i].image}" />
                             </div>
         
                             <div class="mt-3">
+                            
                                 <h2>${result.data[i].name}</h2>
                                 <h5>${result.data[i].position}</h5>
-                                <h4 style="font-size: medium; white-space:pre;">${result.data[i].bio}</h4>
+                                <div style="max-height:150px; overflow:hidden">
+                                <h4 style="font-size: medium; white-space:pre-wrap;">${result.data[i].bio}</h4>
+                            </div>    
         
                                 <hr>
                                 <div style="margin: 5%;"> 
-                                <img src="/images/icons8-phone-ringing.gif" height="26px" width="auto">
+                                <img src="/images/icons/icons8-phone-ringing.png" height="26px" width="auto">
                                     &nbsp;
                                     <a href="tel:+91${result.data[i].contact1}" class="link-danger"
                                         style="font-size: 0.75pc; color:rgb(17, 17, 17) ; text-decoration: none;">${result.data[i].contact1}</a> 
@@ -103,7 +112,7 @@ function create_team(position = "director")
                                     <a href="tel:+91${result.data[i].contact2}" class="link-danger"style=" font-size: 0.75pc; color:rgb(17, 17, 17) ; text-decoration: none;">+91${result.data[i].contact2}</a>
                                 </div>
         
-                                <div style="margin: 5%;"> <img src="/images/icons8-gmail-logo.gif" height="26px" width="auto">
+                                <div style="margin: 5%;"> <img src="/images/icons/icons8-gmail-logo.png" height="26px" width="auto">
                                     &nbsp; <a href="mailto:${result.data[i].email}" class="link-danger"
                                         style="font-size: 0.75pc; color:rgb(17, 17, 17) ; text-decoration: none;">${result.data[i].email}</a>
                                 </div>

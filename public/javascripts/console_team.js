@@ -34,8 +34,8 @@ function load_team_cards()
                             <img class="" src="/images/${result.data[i].image}">
                         </div>
 
-                        <div class="d-flex gap-2 w-100 justify-content-between">
-                            <button type="button" class="btn text-start" id="update_team_btn_${result.data[i].id}" onclick="load_update_team(this.id)">
+                        <div class="d-flex gap-2 w-100 justify-content-between" style="">
+                            <button type="button" style=" background: transparent; max-width: 200px; white-space: pre-wrap" class="btn text-start" id="update_team_btn_${result.data[i].id}" onclick="load_update_team(this.id)">
                                 <h5 class="mb-0 my-2">${result.data[i].name}</h5>
                                 <p class="mt-2 mb-0 opacity-75">${result.data[i].position}</p>
                             </button>
@@ -220,8 +220,8 @@ function load_update_team(btn_id)
     
     
                                 <div style=" max-height:200px; max-width:200px; border-radius: 50%; width:100%; overflow: hidden;"
-                                class="ratio ratio-1x1 shadow mx-auto">
-                                <img id = "update_team_preview" src="/images/${result.data.image}">
+                                            class="ratio ratio-1x1 shadow mx-auto">
+                                <img id = "update_team_preview"  style="object-fit:cover"src="/images/${result.data.image}">
                             </div>
 
                             <div class="mt-3">
@@ -249,23 +249,23 @@ function load_update_team(btn_id)
                                 </div>
 
                                 <hr>
-                                <div style="margin: 5%;"> <img src="icons8-phone-ringing.gif" height="26px"
+                                <div style="margin: 5%;"> <img src="/images/icons/phone.png" height="26px"
                                         width="auto">
                                     <label for="update_team_contact1" class="form-label">Contact Number
                                         1</label>
-                                    <input type="number" class="form-control" id="update_team_contact1" value=${result.data.contact1}>
+                                    <input type="tel" class="form-control" id="update_team_contact1" value=${result.data.contact1}>
                                 </div>
                                 <div style="margin: 5%;">
-                                    <img src="icons8-phone-ringing.gif" height="26px" width="auto">
+                                    <img src="/images/icons/phone.png" height="26px" width="auto">
                                     <label for="update_team_contact_2" class="form-label">Contact Number
                                         2</label>
-                                    <input type="number" class="form-control" id="update_team_contact2" value=${result.data.contact2}>
+                                    <input type="tel" class="form-control" id="update_team_contact2" value=${result.data.contact2}>
                                 </div>
 
-                                <div style="margin: 5%;"> <img class="mx-2" src="icons8-gmail-logo.gif"
+                                <div style="margin: 5%;"> <img class="mx-2" src="/images/icons/mail.png"
                                         height="26px" width="auto"><label for="update_team_email"
                                         class="form-label"> Email</label>
-                                    <input type="text" class="form-control" id="update_team_email"
+                                    <input type="email" class="form-control" id="update_team_email"
                                         aria-describedby="" value = "${result.data.email}">
                                 </div>
 
@@ -274,19 +274,19 @@ function load_update_team(btn_id)
 
                                 <div class="mb-3">
 
-                                    <img src="icons8-linkedin-30 (1).png" height="26px" width="auto">
+                                    <img src="/images/icons/linkedin.png" height="26px" width="auto">
 
                                     <label for="update_team_linkedin" class="form-label">linkedin-link</label>
-                                    <input type="text" class="form-control" id="update_team_linkedin"
+                                    <input type="url" class="form-control" id="update_team_linkedin"
                                         aria-describedby="" value= "${result.data.linkedin}">
                                 </div>
 
                                 <div class="mb-3">
 
-                                    <img src="icons8-twitter-24.png" height="26px" width="auto">
+                                    <img src="/images/icons/twitter.png" height="26px" width="auto">
 
                                     <label for="update_team_twitter" class="form-label">twitter-link</label>
-                                    <input type="text" class="form-control" id="update_team_twitter"
+                                    <input type="url" class="form-control" id="update_team_twitter"
                                         aria-describedby="" value= "${result.data.twitter}">
                                 </div>
 

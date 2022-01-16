@@ -146,7 +146,7 @@ function load_certificate_cards()
                             <img class="" src="/images/${result.data[i].image}">
                         </div>
 
-                        <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div class="d-flex gap-2 w-100 justify-content-between" style="max-width:200px; overflow:hidden">
                             <!--<button type="button" class="btn text-start" id="update_certificate_btn_${result.data[i].id}" onclick="load_update_certificate(this.id)"> -->
                                 <h5 class="mb-0 my-2">${result.data[i].name}</h5>
                            <!--  </button> -->
@@ -262,7 +262,7 @@ function load_partner_cards()
                             <img loading = "lazy" src="/images/${result.data[i].image}">
                         </div>
 
-                        <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div class="d-flex gap-2 w-100 justify-content-between" style="max-width:200px; overflow:hidden">
                             <!--<button type="button" class="btn text-start" id="update_partner_btn_${result.data[i].id}" onclick="load_update_partner(this.id)"> -->
                                 <h5 class="mb-0 my-2">${result.data[i].name}</h5>
                            <!--  </button> -->
@@ -372,7 +372,7 @@ function load_testimonial_cards()
                         aria-current="true">
 
 
-                        <div class="row">
+                        <div class="row" style="max-width:200px; overflow:hidden">
 
                             <div class = "col-12 mb-3 text-start"><h5>${result.data[i].message}</h5></div>
                             <div class = "col-12 text-start"><p>-${result.data[i].author}</p></div>
@@ -486,7 +486,7 @@ function load_client_cards()
                             <img loading = "lazy" src="/images/${result.data[i].image}">
                         </div>
 
-                        <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div class="d-flex gap-2 w-100 justify-content-between" style="max-width:200px; overflow:hidden">
                             <!--<button type="button" class="btn text-start" id="update_client_btn_${result.data[i].id}" onclick="load_update_client(this.id)"> -->
                                 <h5 class="mb-0 my-2">${result.data[i].name}</h5>
                            <!--  </button> -->

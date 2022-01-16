@@ -25,17 +25,22 @@ function load_news_cards()
                 {
                     
                     let d = `
+                    
+
                             <div class="list-group-item list-group-item-action d-flex gap-3 py-3 content-hover-red" aria-current="true">
 
 
-                                <div style="height: 108px;width: 192px; overflow:hidden;  display: flex; align-items: center; justify-content: center;" class="shadow ">
-                                    <img loading="lazy" style = " max-width: 224px;" src="/images/${result.data[i].image}">
-                                </div>
+                            <div style="max-height:100px; max-width:100px;  width:100%; overflow: hidden;"
+                            class="ratio ratio-16x9 shadow mx-auto">
+                            <img class="" src="/images/${result.data[i].image}">
+                        </div>
 
                                 <div class="d-flex gap-2 w-100 justify-content-between">
                                     <button style="background-color: transparent " type="button" id = "btn_${result.data[i].id}" class="btn text-start" onclick = "load_update(this.id)">
-                                        <h5 class="mb-0 my-2">${result.data[i].headline}</h5>
+                                    <div style="max-width:200px;overflow:hidden; text-overflow: ellipsis;">
+                                        <h5 class="mb-0 my-2" style="white-space: pre-wrap">${result.data[i].headline}</h5>
                                         <p class="mt-2 mb-0 opacity-75">${result.data[i].updatedAt}</p>
+                                        </div>                               
                                     </button>
 
                                 </div>
@@ -202,17 +207,22 @@ function load_update(btn_id)
 
                         <div class="mb-3">
                             <label for="update_headline_input" class="form-label">Headline</label>
-                            <input type="text" class="form-control" id="update_headline_input" aria-describedby="" value= "${result.data.headline}">
+                            <input type="text"
+                            
+                            class="form-control" id="update_headline_input" aria-describedby="" value= "${result.data.headline}">
 
                         </div>
                         <div class="mb-3">
                             <label for="update_link_input" class="form-label">additional Link</label>
-                            <input type="text" class="form-control" id="update_link_input" aria-describedby="" value= "${result.data.link}">
+                            <input type="text" class="form-control"
+                            
+                            id="update_link_input" aria-describedby="" value= "${result.data.link}">
 
                         </div>
                         <div class="mb-3">
                             <label for="update_article_input" class="form-label">Article</label>
-                            <textarea type="text" class="form-control" id="update_article_input" aria-describedby="" value="${result.data.article}">${result.data.article}</textarea>
+                            <textarea type="text" class="form-control"
+                            id="update_article_input" aria-describedby="" value="${result.data.article}">${result.data.article}</textarea>
 
                         </div>
 

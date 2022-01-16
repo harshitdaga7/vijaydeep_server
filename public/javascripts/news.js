@@ -67,7 +67,7 @@ function handle_news()
 
 
                         let d = `
-                    <div class="row m-5 border rounded-3 border-1 " id = "news_${result.data[i].id}" style="overflow:hidden;   " >
+                    <div class="row m-5 border rounded-3 border-1 shadow-lg" id = "news_${result.data[i].id}" style="overflow:hidden;   " >
                             
                     <div class="col-md-12 col-sm-12 col-lg-9  p-5 order-last order-lg-first" style="overflow:hidden; z-index: 50;background-image: url('/images/endless-constellationwhite.svg');">
                     <h1 >${result.data[i].headline}</h1>

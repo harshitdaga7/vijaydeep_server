@@ -62,14 +62,16 @@ function load_product_cards()
 
 
                     <div style="max-height:100px; max-width:100px;  width:100%; overflow: hidden;"
-                        class="ratio ratio-1x1 shadow mx-auto">
+                        class="ratio ratio-16x9 shadow mx-auto">
                         <img class="" src="/images/${result.data[i].image1}">
                     </div>
 
                     <div class="d-flex gap-2 w-100 justify-content-between">
-                        <button type="button" class="btn text-start" id = "product_update_btn_${result.data[i].id}" onclick = "load_update(this.id)">
+                        <button style="background-color: transparent" type="button" class="btn text-start" id = "product_update_btn_${result.data[i].id}" onclick = "load_update(this.id)">
+                        <div style="max-width:200px; overflow:hidden">
                             <h5 class="mb-0 my-2">${result.data[i].name}</h5>
                             <p class="mt-2 mb-0 opacity-75" style="font-size:0.7pc;">${result.data[i].createdAt}</p>
+                        </div>
                         </button>
                     </div>
                     <button type="button" class="btn-close" name = "${result.data[i].name}" id = "product_delete_${result.data[i].id}" onclick = "load_delete(this.id,this.name)"></button>
@@ -255,14 +257,22 @@ function load_update(btn_id)
                 </div>
                 <div class="modal-body">
 
+
+                
+
                 <form>
     
 
                 <!-- image view -->
                 <div class="row">
-                    <div class="col-4 ">
+                    <div class="col-lg-4 ">
+                    
+                <div style="height:108px;width: 192px; overflow:hidden;  display: flex; align-items: center; justify-content: center;" class="shadow-lg mx-3" >
 
-                        <img class="img-fluid" id = "product_image1_update_preview" src="/images/${result.data.image1}">
+
+                        <img class=" " style = "max-width:224px;" loading="lazy" id = "product_image1_update_preview" src="/images/${result.data.image1}">
+
+                </div>
                         <div class="mt-3">
                             <div class="mb-3 ">
                                 <label for="avatar">Choose Product Img 1:</label>
@@ -272,9 +282,14 @@ function load_update(btn_id)
 
 
                     </div>
-                    <div class="col-4 ">
+                    <div class="col-lg-4 ">
 
-                        <img class="img-fluid" id = "product_image2_update_preview" src="/images/${result.data.image2}">
+                    <div style="height:108px;width: 192px; overflow:hidden;  display: flex; align-items: center; justify-content: center;" class="shadow-lg mx-3" >
+
+
+                    <img class=" " style = "max-width:224px;" loading="lazy" id = "product_image2_update_preview" src="/images/${result.data.image2}">
+
+            </div>
                         <div class="mt-3">
                             <div class="mb-3 ">
                                 <label for="avatar">Choose Product Img 2:</label>
@@ -283,9 +298,14 @@ function load_update(btn_id)
                         </div>
 
                     </div>
-                    <div class="col-4 ">
+                    <div class="col-lg-4 ">
 
-                        <img class="img-fluid" id = "product_image3_update_preview" src="/images/${result.data.image3}">
+                    <div style="height:108px;width: 192px; overflow:hidden;  display: flex; align-items: center; justify-content: center;" class="shadow-lg mx-3" >
+
+
+                    <img class=" " style = "max-width:224px;" loading="lazy" id = "product_image3_update_preview" src="/images/${result.data.image3}">
+
+            </div>
                         <div class="mt-3">
                             <div class="mb-3 ">
                                 <label for="avatar">Choose Product Img 3:</label>
@@ -297,7 +317,7 @@ function load_update(btn_id)
 
                 <div class="mb-3">
                     <label for="exampleInputname" class="form-label">name</label>
-                    <input type="text" class="form-control" id="product_name_update_input" aria-describedby="" value = "${result.data.name}">
+                    <input type="text" class="form-control" maxlength="100" placeholder="text limit 100 charaters" id="product_name_update_input" aria-describedby="" value = "${result.data.name}">
 
                 </div>
                 <div class="mb-3">
@@ -307,7 +327,7 @@ function load_update(btn_id)
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputDescription" class="form-label">Description</label>
-                    <textarea type="text" class="form-control" id="product_description_update_input" aria-describedby="" value = "${result.data.description}">${result.data.description}</textarea>
+                    <textarea type="text" class="form-control" maxlength="800" placeholder="text limit 800 charaters"id="product_description_update_input" aria-describedby="" value = "${result.data.description}">${result.data.description}</textarea>
 
                 </div>
 
