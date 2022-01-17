@@ -51,7 +51,7 @@
 
         .ca-btn-clr{
 
-            background-color: #302457;
+            background-color: #ffdcdc;
         }
 
 
@@ -114,17 +114,17 @@
     <main>
             <!-- about us section -->
 
-    <div class = "container mt-5 py-5" id = "aboutus">
-        <div class="row rounded-3 shadow-sm">
-            <div class="col-lg-8 my-auto p-1 p-lg-5 order-first order-lg-first">
+    <div class = "container mt-5 py-5  " style="background-image: url(/images/endless-constellationwhite.svg);" id = "aboutus">
+        <div class="row rounded-3 ">
+            <div class="col-lg-8 my-auto p-1 p-lg-5 order-first order-lg-first ">
                 
                 <h1 class = "title text-center text-lg-start p-4">About us</h1>
-                <hr>
-                <p class = "content text-center text-lg-start"><%= aboutus %></p>
+                
+                <p class = "content text-center text-lg-start" style="white-space: pre-wrap;"><%= aboutus %></p>
 
             </div>
             <div class="col-lg-4 text-center my-auto p-1 p-lg-2 order-last order-lg-last">
-                <img src = "/images/logo.png" class = "img-fluid">
+                <img style="height: 200px; object-fit: contain;" src = "/images/logo.png" class = "img-fluid">
             </div>
         </div>
     </div>
@@ -132,27 +132,27 @@
 
     <!-- our philosophy -->
 
-    <div class = "container mt-5 py-5" id = "philosophy">
-        <div class="row rounded-3 ">
+    <div class = "container mt-5 py-5" id = "philosophy" style="background-image: url(/images/endless-constellationwhite.svg);">
+        <div class="row rounded-3 " >
             <div class="col-lg-8 my-auto p-1 p-lg-5 order-first order-lg-last">
                 
                 <h1 class = "title text-center text-lg-start p-4">Our Philosophy</h1>
-                <hr>
-                <p class = "content text-center text-lg-start"><%= philosophy %></p>
+                
+                <p class = "content text-center text-lg-start" style="white-space:pre-wrap;"><%= philosophy %></p>
 
             </div>
             <div class="col-lg-4 text-center my-auto p-1 p-lg-2 order-last order-lg-first">
-                <img src = "/images/build.png" class = "img-fluid">
+                <img style="height: 300px; object-fit: contain;" src = "/images/build.png" class = "img-fluid">
             </div>
         </div>
     </div>
 
 
     <!-- Our Partners -->
-    <div class = "container mt-5 py-5" id = "partners">
+    <div class = "container mt-5 py-5" style="background-image: url(/images/endless-constellationwhite.svg);"" id = "partners">
         <div class = "row justify-content-center">
             <h1 class = "title text-center p-4">Our Partners</h1>
-            <hr>
+            
             <% for( let i = 0; i < partners.length; i++ ) { %>
 
                 <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
@@ -167,12 +167,12 @@
     </div>
 
     <!-- Our clients -->
-    <div id = "outer-client">
+    <div id = "outer-client" style="background-image: url(/images/endless-constellationwhite.svg);">
         <div class = "container mt-5 py-5" id = "clients">
 
             <div class = "row justify-content-center">
                 <h1 class = "title text-center p-4">Our clients</h1>
-                <hr>
+                
 
                 <% for( let i = 0; i < clients.length; i++ ) { %>
 
@@ -205,7 +205,7 @@
                         <% if( i == 0){ %>
                             <div class="carousel-item active">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                    <div class="card border border-1 border-dark align-middle" style = "height: 100%;">
+                                    <div class="card border shadow-lg  align-middle" style = "height: 100%;">
                                         <div class="card-body">
                                           <p class="card-text test-quote text-center"><q><%= testimonials[i].message %> </q>.</p>
                                           <p class ="test-author text-center">-<%= testimonials[i].author %> </p>
@@ -216,7 +216,7 @@
                          <% }else{ %>
                             <div class="carousel-item ">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                    <div class="card border border-1 border-dark" style = "height: 100%;">
+                                    <div class="card border border" style = "height: 100%;">
                                         <div class="card-body">
                                           <p class="card-text test-quote text-center "><q><%= testimonials[i].message %> </q>.</p>
                                           <p class ="test-author text-center">-<%= testimonials[i].author %> </p>
@@ -261,12 +261,12 @@
 
 
     <!--certificates-->
-    <div id = "outer-certificate">
+    <div id = "outer-certificate" style="background-image: url(/images/endless-constellationwhite.svg);">
         <div class = "container mt-5 py-5"  id = "certificate">
 
             <div class = "row justify-content-center">
                 <h1 class = "title text-center p-4">Certificates</h1>
-                <hr>
+                
                 
                 <% for( let i = 0; i < certificates.length; i++ ) { %>
 
