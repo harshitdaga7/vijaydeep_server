@@ -34,7 +34,7 @@ function load_team_cards()
                             <img class="" src="/images/${result.data[i].image}">
                         </div>
 
-                        <div class="d-flex gap-2 w-100 justify-content-between" style="">
+                        <div class="d-flex gap-2 w-100 justify-content-between" style=" overflow:hidden">
                             <button type="button" style=" background: transparent; max-width: 200px; white-space: pre-wrap" class="btn text-start" id="update_team_btn_${result.data[i].id}" onclick="load_update_team(this.id)">
                                 <h5 class="mb-0 my-2">${result.data[i].name}</h5>
                                 <p class="mt-2 mb-0 opacity-75">${result.data[i].position}</p>
@@ -231,19 +231,19 @@ function load_update_team(btn_id)
                                 </div>
                                 <div class="mb-3">
                                     <label for="update_team_name" class="form-label">name</label>
-                                    <input type="text" class="form-control" id="update_team_name"
+                                    <input type="text" maxlength="100" placeholder="maxlength 100 characters."  class="form-control" id="update_team_name"
                                         aria-describedby="" value = "${result.data.name}">
 
                                 </div>
                                 <div class="mb-3">
                                     <label for="update_team_position" class="form-label">Position</label>
-                                    <input type="text" class="form-control" id="update_team_position"
+                                    <input type="text" maxlength="100" placeholder="maxlength 100 characters." class="form-control" id="update_team_position"
                                         aria-describedby="" value = "${result.data.position}">
 
                                 </div>
                                 <div class="mb-3">
                                     <label for="update_team_bio" class="form-label">Bio</label>
-                                    <textarea type="text" class="form-control" id="update_team_bio"
+                                    <textarea type="text" maxlength="300" placeholder="maxlength 300 characters." class="form-control" id="update_team_bio"
                                         aria-describedby="">${result.data.bio}</textarea>
 
                                 </div>

@@ -31,8 +31,8 @@ function create_team(position = "director")
                         <div class="col-lg-6 text-center p-5" style = "height:inherit">
                             <div style=" display:flex;
                             justify-content:center;
-                            flex-direction: column; background-image: url(/images/endless-constellationwhite.svg);
-                            align-items:center;height:100%;" class="  border p-5 border-2 rounded-3 shadow ">
+                            flex-direction: column; background-image: url(/images/endless-constellationwhite.svg); overflow:hidden;
+                            align-items:center;height:900px;" class="  border p-5 border-2 rounded-3 shadow ">
             
             
                                 <div style=" display: flex;
@@ -43,9 +43,10 @@ function create_team(position = "director")
                                 </div>
             
                                 <div class="mt-3">
-                                    <h2>${result.data[i].name}</h2>
-                                    <h5>${result.data[i].position}</h5>
-                                    <h4 style="font-size: medium; white-space:pre-wrap;">${result.data[i].bio}</h4>
+                                <h2 style="white-space:pre-wrap;">${result.data[i].name}</h2>
+                                <h5 style="white-space:pre-wrap;">${result.data[i].position}</h5>
+                                <div style="max-height:150px; overflow:hidden">
+                                <h4 style="font-size: medium; white-space:pre-wrap; ">${result.data[i].bio}</h4>
             
                                     <hr>
                                     <div style="margin: 5%;"> 
@@ -85,8 +86,8 @@ function create_team(position = "director")
 
                         let d = `
 
-                        <div class="col-md-6 col-lg-4 text-center p-5 " style = "height:inherit">
-                        <div style="display:flex;justify-content:center;flex-direction: column; align-items:center;height:900px;  background-image: url(/images/endless-constellationwhite.svg);" class="  border p-5 border-2 rounded-3 shadow ">
+                        <div class="col-md-6 col-lg-4 text-center p-5 " style = "height:inherit; ">
+                        <div style="display:flex;justify-content:center;flex-direction: column; align-items:center;height:900px;  background-image: url(/images/endless-constellationwhite.svg); overflow:hidden" class="  border p-5 border-2 rounded-3 shadow ">
                              <div style=" display: flex;
                             align-items: center;
                             justify-content: center;max-height:400px; max-width:400px; border-radius: 50%; width:100%; overflow: hidden;"
@@ -94,13 +95,15 @@ function create_team(position = "director")
                                 <img class="shadow mx-auto" style="object-fit:cover" src="/images/${result.data[i].image}" />
                             </div>
         
-                            <div class="mt-3">
+                            <div class="mt-3" >
                             
-                                <h2>${result.data[i].name}</h2>
-                                <h5>${result.data[i].position}</h5>
+                            
+                                <h2 style="white-space:pre-wrap;">${result.data[i].name}</h2>
+                                <h5 style="white-space:pre-wrap;">${result.data[i].position}</h5>
                                 <div style="max-height:150px; overflow:hidden">
-                                <h4 style="font-size: medium; white-space:pre-wrap;">${result.data[i].bio}</h4>
-                            </div>    
+                                <h4 style="font-size: medium; white-space:pre-wrap; ">${result.data[i].bio}</h4>
+                            
+                                </div>    
         
                                 <hr>
                                 <div style="margin: 5%;"> 

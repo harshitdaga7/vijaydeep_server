@@ -79,15 +79,15 @@
 
                                 <div class="mb-3">
                                     <label class="form-label">Name</label>
-                                    <input class="form-control" type="text" name="entry.2013309438" required>
+                                    <input class="form-control" maxlength="100" type="text" name="entry.2013309438" required>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Email</label>
-                                    <input class="form-control" type="email" name="entry.1252195334" required>
+                                    <input class="form-control" maxlength="100" type="email" name="entry.1252195334" required>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Contact No.</label>
-                                    <input class="form-control" type="text" name="entry.839376617" required>
+                                    <input class="form-control" maxlength="13" type="text" name="entry.839376617" required>
                                 </div>
                                 <div class="mb-4"><label class="form-label">Message</label><textarea
                                         class="form-control" required="" rows="4" name="entry.833926264"></textarea></div>
@@ -95,7 +95,7 @@
                     text-shadow: 2px 2px 4px #000000; margin-left: 5px;
 
       margin-right: 5px; min-width: fit-content; " class="btn btn-primary w-100 mb-2 btn btn-danger"
-                                        type="submit">Submit</button>
+                                       onclick="Success()" type="submit">Submit</button>
                                     <p><small class="text-black-50">We are going ahead where are you going?<br></small>
                                     </p>
                                 </div>
@@ -123,3 +123,8 @@
     </body>
 
 </html>
+<script>
+    function Success(){
+        alert("Your message is sent")
+    }
+</script>
