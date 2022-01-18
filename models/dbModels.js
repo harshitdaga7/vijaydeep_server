@@ -7,8 +7,8 @@ const DataTypes = Sequelize.DataTypes
 
 async function my_sync()
 {
-    await sequelize.sync({alter:true})
-    // await sequelize.sync()
+//     await sequelize.sync({alter:true})
+    await sequelize.sync()
 }
 
 // user model
