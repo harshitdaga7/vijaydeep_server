@@ -18,6 +18,18 @@ textarea{
   background:#971628;
 }
 
+
+
+.dropdown-item{
+
+  color:white !important;
+}
+
+.dropdown-item:hover{
+
+  color:black !important;
+}
+
 #login_button{
 
   background: transparent;
