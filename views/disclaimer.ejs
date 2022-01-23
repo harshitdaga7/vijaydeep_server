@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+  <%- include("partials/head"); -%>
+  <style>
+
+        .img-responsive{
+
+            height: 100%;
+            width: 100%;
+        }
+
+        .part-image{
+
+            max-height: 100px;
+            max-width: 100px;
+        }
+
+        .title{
+
+            font-size: 50px;
+            font-weight: 900;
+            color:rgb(39, 38, 38);
+            word-wrap: break-word;
+        }
+
+        .content{
+
+            font-size: 20px;
+            font-weight: 300;
+            color:rgb(83, 82, 82);
+        }
+
+        .test-quote{
+
+            font-size: 23px;
+            word-spacing:0px;
+            font-weight: 500;
+            font-style: italic;
+            color:black;
+        }
+
+        .test-author{
+
+            font-size: 20px;
+            word-spacing:0px;
+            font-weight: 300;
+            color:rgb(121, 120, 120);
+
+        }
+
+        .ca-btn-clr{
+
+            background-color: #ffdcdc;
+        }
+
+
+
+        #philosophy{
+
+            background: rgb(238, 233, 225);
+        }
+
+        #outer-client{
+
+            background:rgb(238, 233, 225);
+        }
+
+        #outer-certificate{
+            background:rgb(238, 233, 225);
+        }
+
+        @media (max-width: 767px) {
+        .carousel-inner .carousel-item > div {
+            display: none;
+        }
+        .carousel-inner .carousel-item > div:first-child {
+            display: block;
+        }
+    }
+
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        display: flex;
+    }
+
+    /* medium and up screens
+    @media (min-width: 768px) {
+        
+        .carousel-inner .carousel-item-end.active,
+        .carousel-inner .carousel-item-next {
+        
+        }
+        
+        .carousel-inner .carousel-item-start.active, 
+        .carousel-inner .carousel-item-prev {
+        
+        }
+    }
+
+    .carousel-inner .carousel-item-end,
+    .carousel-inner .carousel-item-start { 
+   
+    } */
+
+
+</style>
+
+  <body>
+    <%- include("partials/navbar",{role:role,contact1:contact1,contact2:contact2,email:email}); -%>
+
+        <!-- Main content -->
+    <main>
+
+        <h1>
+            Attributions:
+
+        </h1>
+        <h5 style="white-space: pre-wrap;">
+<a target="_blank" href="https://icons8.com/icon/OumT4lIcOllS/mail">Mail</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/dvZnjC1SVTyx/call">Call</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/59865/planner">Planner</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/CDleTIq7hC9W/team">Team</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/cNe2JZrj7FHH/group">Group</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/YQWu4KJu4IjB/goods">Goods</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/x4l05DoVRraa/news">News</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icon/NM3MknbY9xPo/cart">Cart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+        </h5>
+   
+    </main>
+
+    <%- include("partials/footer",{contact1:contact1,contact2:contact2,email:email,address:address}); -%>
+
+    <%- include("partials/tail"); -%>
+
+  </body>
+
+</html>

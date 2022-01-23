@@ -15,8 +15,8 @@ var newsRouter = require('./routes/news');
 var contactRouter = require('./routes/contact');
 var teamRouter = require('./routes/team');
 var consoleRouter = require('./routes/console');
-var apiRouter = require('./routes/api')
-
+var apiRouter = require('./routes/api');
+var disclaimerRouter = require('./routes/disclaimer');
 
 
 const { json } = require('express/lib/response');
@@ -62,9 +62,9 @@ app.use('/news',newsRouter);
 app.use('/contact',contactRouter);
 app.use('/team',teamRouter);
 app.use('/console', consoleRouter);
-app.use('/user',userRouter)
-app.use('/api',apiRouter)
-
+app.use('/user',userRouter);
+app.use('/api',apiRouter);
+app.use('/disclaimer',disclaimerRouter);
 
 
 
