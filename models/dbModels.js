@@ -31,7 +31,7 @@ var user = sequelize.define('user',{
         set(value)
         {
             let lower_case = value.toLowerCase();
-            console.log(lower_case);
+            //console.log(lower_case);
             this.setDataValue('email',lower_case); 
         }
     },
@@ -65,7 +65,7 @@ var contact = sequelize.define('contact',{
         set(value)
         {
             let lower_case = value.toLowerCase();
-            console.log(lower_case);
+            //console.log(lower_case);
             this.setDataValue('email',lower_case); 
         }
     },
@@ -395,7 +395,7 @@ var product = sequelize.define('product',{
 })
 
 my_sync().then(()=>{console.log('synced sucessfully')})
-// .catch((err)=>console.log('dbModels.js ->','could not sync database',{name:err.name , message : err.message}))
+// .catch((err)=>//console.log('dbModels.js ->','could not sync database',{name:err.name , message : err.message}))
 
 
 
