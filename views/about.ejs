@@ -156,13 +156,10 @@
             <% for( let i = 0; i < partners.length; i++ ) { %>
 
                 <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
-                   <a  href = "<%= partners[i].link %>"><img src = "/images/<%= partners[i].image%>" style = "max-height: 250px; max-width: 250px;" title="<%= partners[i].name %>" ></a>
+                   <a  href = "<%= partners[i].link %>"><img src = "/images/<%= partners[i].image%>" style = "max-height: 250px; max-width: 250px;" title="<%= partners[i].name %>" loading = "lazy" ></a>
                 </div>
         
             <% } %>
-            <!-- <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
-                <img src = "logo_1.png" class = "part-img">
-            </div> -->
         </div>
     </div>
 
@@ -177,7 +174,7 @@
                 <% for( let i = 0; i < clients.length; i++ ) { %>
 
                     <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
-                        <a href  = "<%= clients[i].link %>"><img src = "/images/<%= clients[i].image%>" style = "max-height: 250px; max-width: 250px;" title="<%= clients[i].name %>" ></a>
+                        <a href  = "<%= clients[i].link %>"><img src = "/images/<%= clients[i].image%>" style = "max-height: 250px; max-width: 250px;" title="<%= clients[i].name %>" loading = "lazy" ></a>
                     </div>
             
                 <% } %>
@@ -272,14 +269,14 @@
 
                     <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center m-4">
                         
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#seecerti_<%= certificates[i].id %>"  style="background-color: transparent;"><img src = "/images/<%= certificates[i].image%> " title="<%= certificates[i].name %>" style = "max-height: 250px; max-width: 250px; "></button>
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#seecerti_<%= certificates[i].id %>"  style="background-color: transparent;"><img src = "/images/<%= certificates[i].image%> " title="<%= certificates[i].name %>" style = "max-height: 250px; max-width: 250px; " loading = "lazy"></button>
 
                         <div class="modal fade " id="seecerti_<%= certificates[i].id %>" tabindex="-1" aria-labelledby="seecerti_<%= certificates[i].id %>Label" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
                                 <div class="modal-content">
                                    
                                     <div class="modal-body">
-                                        <img src = "/images/<%= certificates[i].image%>" style = "max-width:100%;" title="<%= certificates[i].name %>" >
+                                        <img src = "/images/<%= certificates[i].image%>" style = "max-width:100%;" title="<%= certificates[i].name %>" loading = "lazy">
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" 
@@ -293,105 +290,9 @@
                     
                     </div>
                 <% } %>
-                <!-- <div class = "col-12 col-sm-6 col-md-4 col-lg-3 text-center p-4">
-                    <img src = "logo_1.png" class = "part-img">
-                </div> -->
             </div>
         </div>
     </div>
-
-
-
-
-    <!-- <div class="container text-center my-3">
-        <h2 class="font-weight-light">Bootstrap Multi Slide Carousel</h2>
-        <div class="row mx-auto my-auto justify-content-center">
-            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
-                                </div>
-                                <div class="card-img-overlay">Slide 1</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <img src="//via.placeholder.com/500x400/e66?text=2" class="img-fluid">
-                                </div>
-                                <div class="card-img-overlay">Slide 2</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <img src="//via.placeholder.com/500x400/7d2?text=3" class="img-fluid">
-                                </div>
-                                <div class="card-img-overlay">Slide 3</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <img src="//via.placeholder.com/500x400?text=4" class="img-fluid">
-                                </div>
-                                <div class="card-img-overlay">Slide 4</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <img src="//via.placeholder.com/500x400/aba?text=5" class="img-fluid">
-                                </div>
-                                <div class="card-img-overlay">Slide 5</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <img src="//via.placeholder.com/500x400/fc0?text=6" class="img-fluid">
-                                </div>
-                                <div class="card-img-overlay">Slide 6</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <img src="//via.placeholder.com/500x400/fc0?text=7" class="img-fluid">
-                                </div>
-                                <div class="card-img-overlay">Slide 7</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                </div>
-                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
-            </div>
-        </div>
-        <h5 class="mt-2 fw-light">advances one slide at a time</h5>
-    </div> -->
 
     <script>
         let items = document.querySelectorAll('.carousel .carousel-item')
