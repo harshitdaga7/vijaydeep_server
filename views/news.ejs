@@ -35,6 +35,70 @@
           <div class = "loader mx-auto m-5" id = "preload"></div>
         <div class="container-fluid"  id = "news_container" style = "visibility: hidden;">
             
+
+            
+          <% for( let i = 0; i < news.length; i++ ) { %>
+
+            <% if( i%2==0){ %>
+
+
+                
+            <div class="row m-5 border  rounded-3 border-1 shadow-lg" id = "news_<%= news[i].id %>" style="overflow:hidden; " >
+            
+                
+                <div class="col-md-12 col-sm-12 col-lg-3 position-sticky " >
+                    <img style="height:100% ; object-fit: cover;" src="/images/news_<%= news[i].image %> " class="zoom d-block w-100" alt="..." loading = "lazy">
+    
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-9 bg-light p-5" style="overflow:hidden; z-index: 50;">
+                    <h1 ><%= news[i].headline %> </h1>
+                    <p class="small">
+                        <img src="/images/icons8-calendar-30.png" height="26px" width="auto"> <%= news[i].createdAt %> 
+                    </p>
+                    <p style="font-size: medium;"><%= news[i].article %> </p>
+                    <a href="<%= news[i].link %> ">//LInk for more info</a>
+    
+                </div>
+                
+    
+    
+            </div>
+
+
+
+
+             <% }else{ %>
+
+                <div class="row m-5 border rounded-3 border-1 shadow-lg" id = "news_<%= news[i].id%> " style="overflow:hidden; " >
+            
+                
+                
+                    <div class="col-md-12 col-sm-12 col-lg-9 bg-light p-5 order-lg-0 order-1 " style="overflow:hidden; z-index: 50;">
+                        <h1 ><%= news[i].headline %> </h1>
+                        <p class="small">
+                            <img src="/images/icons8-calendar-30.png" height="26px" width="auto"> <%= news[i].createdAt %> 
+                        </p>
+                        <p style="font-size: medium;"><%= news[i].article %> </p>
+                        <a href="<%= news[i].link %> ">//LInk for more info</a>
+        
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-lg-3 position-sticky order-lg-1 order-0" >
+                        <img style=" height:100%" src="/images/<%= news[i].image %> " class="zoom  d-block w-100" alt="..." loading = "lazy">
+        
+                    </div>
+        
+        
+                </div>
+
+
+                
+              <% } %>
+
+
+    
+        <% } %> 
+
+<!-- 
             <div class="row m-5 border  rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
             
                 
@@ -76,7 +140,7 @@
                 </div>
     
     
-            </div>
+            </div> -->
     
     
         </div>

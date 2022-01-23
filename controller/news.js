@@ -46,7 +46,7 @@ async function find_by_id_(id)
 
 async function find_all_(my_order = 'DESC')
 {
-    var news_arr = await News.findAll({order:[['updatedAt',my_order]]})
+    var news_arr = await News.findAll({order:[['createdAt',my_order]]})
 
     if(news_arr)
     {
