@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var contactController = require('../controller/contact')
 var aboutusController = require('../controller/aboutus')
+var meta_data = require('../meta_data')
 
 
 // getting contact_data
@@ -77,7 +78,11 @@ router.get('/', async function(req, res, next) {
     var contact_data = await get_contact_data();
     var abt_data = await get_about()
     var abt_other = await get_about_other()
-    var data = {role:req.headers.role,
+    var data = {
+
+        meta_description : meta_data.about,
+        title:"About us",
+        role:req.headers.role,
         contact1:contact_data.contact1,
         contact2:contact_data.contact2,
         email:contact_data.email,

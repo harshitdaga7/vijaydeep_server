@@ -3,6 +3,7 @@ var router = express.Router();
 var contactController = require('../controller/contact')
 var mottoController = require('../controller/motto')
 var aboutusController = require('../controller/aboutus')
+var meta_data = require('../meta_data')
 
 
 // getting contact_data
@@ -87,7 +88,10 @@ router.get('/', async function(req, res, next) {
         var contact_data = await get_contact_data();
         var motto_data = await get_motto_content();
         console.log(contact_data);
-        var data = {role:req.headers.role,
+        var data = {
+            meta_description : meta_data.console,
+            title:"Console",
+            role:req.headers.role,
             contact1:contact_data.contact1,
             contact2:contact_data.contact2,
             email:contact_data.email,
@@ -113,7 +117,11 @@ router.get('/console_about', async function(req, res, next) {
         var motto_data = await get_motto_content();
         var aboutus_data = await get_about();
         console.log(contact_data);
-        var data = {role:req.headers.role,
+        var data = {
+
+            meta_description : meta_data.console_about,
+            title:"Console",
+            role:req.headers.role,
             contact1:contact_data.contact1,
             contact2:contact_data.contact2,
             email:contact_data.email,
@@ -140,7 +148,10 @@ router.get('/console_news', async function(req, res, next) {
         var contact_data = await get_contact_data();
         var motto_data = await get_motto_content();
         console.log(contact_data);
-        var data = {role:req.headers.role,
+        var data = {
+          meta_description : meta_data.console_news,
+            title:"Console News",
+            role:req.headers.role,
             contact1:contact_data.contact1,
             contact2:contact_data.contact2,
             email:contact_data.email,
@@ -165,7 +176,10 @@ router.get('/console_products', async function(req, res, next) {
         var contact_data = await get_contact_data();
         var motto_data = await get_motto_content();
         console.log(contact_data);
-        var data = {role:req.headers.role,
+        var data = {
+          meta_description : meta_data.console_products,
+            title:"Console Products",
+            role:req.headers.role,
             contact1:contact_data.contact1,
             contact2:contact_data.contact2,
             email:contact_data.email,
@@ -191,7 +205,10 @@ router.get('/console_team', async function(req, res, next) {
         var contact_data = await get_contact_data();
         var motto_data = await get_motto_content();
         console.log(contact_data);
-        var data = {role:req.headers.role,
+        var data = {
+          meta_description : meta_data.console_team,
+            title:"Console Team",
+            role:req.headers.role,
             contact1:contact_data.contact1,
             contact2:contact_data.contact2,
             email:contact_data.email,
@@ -216,7 +233,10 @@ router.get('/console_team', async function(req, res, next) {
         var contact_data = await get_contact_data();
         var motto_data = await get_motto_content();
         console.log(contact_data);
-        var data = {role:req.headers.role,
+        var data = {
+          meta_description : meta_data.console_users,
+            title:"Console Users",
+            role:req.headers.role,
             contact1:contact_data.contact1,
             contact2:contact_data.contact2,
             email:contact_data.email,

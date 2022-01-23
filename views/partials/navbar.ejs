@@ -87,8 +87,26 @@
                 </li>
 
                 <% if (role >= 1) { %>
-                    <li class="nav-item header-elements-hover px-1">
-                        <a class="nav-link active"  id = "console" href="/console">Console</a>
+                    <li class="nav-item header-elements-hover px-1 dropdown">
+
+                        <!-- <div class="dropdown"> -->
+                            <a class="nav-link active dropdown-toggle" id = "console" href="/console" role="button"  data-bs-toggle="dropdown" aria-expanded="false">
+                              Console
+                            </a>
+                          
+                            <ul class="dropdown-menu bg-body mt-0" aria-labelledby="console">
+                              <li><a class="dropdown-item fw-bold" href="/console" >Console</a></li>
+                              <li><a class="dropdown-item fw-bold" href="/console/#contact-info" >Update Contact</a></li>
+                              <li><a class="dropdown-item fw-bold" href="/console/#motto-info" >Update Motto</a></li>
+
+                              <li><a class="dropdown-item fw-bold" href="/console/console_team">Update Team</a></li>
+                              <li><a class="dropdown-item fw-bold" href="/console/console_news">Update News</a></li>
+                              <li><a class="dropdown-item fw-bold" href="/console/console_products">Update Products</a></li>
+                              <li><a class="dropdown-item fw-bold" href="/console/console_about">Change About us</a></li>
+                            </ul>
+                          <!-- </div> -->
+
+                        <!-- <a class="nav-link active"  id = "console" href="/console">Console</a> -->
                     </li>
                 <% } %>
             </ul>

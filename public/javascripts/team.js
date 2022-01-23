@@ -66,10 +66,10 @@ function create_team(position = "director")
             
                                     <hr>
                                     <a style="text-decoration: none; margin-right: 5px;" href="${result.data[i].linkedin}">
-                                        <img src="/images/icons8-linkedin-30 (1).png" height="26px" width="auto">
+                                        <img src="/images/icons/linkedin.png" height="26px" width="auto">
                                     </a>
                                     <a style="text-decoration: none; margin-right: 5px;" href="${result.data[i].twitter}">
-                                        <img src="/images/icons8-twitter-24.png" height="26px" width="auto">
+                                        <img src="/images/icons/twitter.png" height="26px" width="auto">
                                     </a>
             
             
@@ -123,12 +123,11 @@ function create_team(position = "director")
         
                                 <hr>
                                 <a style="text-decoration: none; margin-right: 5px;" href="${result.data[i].linkedin}">
-                                    <img src="/images/icons8-linkedin-30 (1).png" height="26px" width="auto">
+                                    <img src="/images/icons/linkedin.png" height="26px" width="auto">
                                 </a>
                                 <a style="text-decoration: none; margin-right: 5px;" href="${result.data[i].twitter}">
-                                    <img src="/images/icons8-twitter-24.png" height="26px" width="auto">
+                                    <img src="/images/icons/twitter.png" height="26px" width="auto">
                                 </a>
-        
         
                             </div>
         
