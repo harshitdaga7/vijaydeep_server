@@ -3,11 +3,27 @@
 
   <%- include("partials/head"); -%>
 
-  <body >
+  <style>
+  .loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #db4d34;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+    </style>
+
+  <body onload = "handle_load()">
     <%- include("partials/navbar",{role:role,contact1:contact1,contact2:contact2,email:email}); -%>
 
         <!-- Main content -->
-    <main>
+    <main id = "main-content">
          <!-- background by SVGBackgrounds.com -->
         <div class="p-4 p-md-5 mb-4 text-white  " style="background-image: url('/images/endless-constellationred.svg'); background-repeat: no-repeat; background-size: cover ;">
             
@@ -16,7 +32,8 @@
               <p class="lead my-3">Leading news from the industry and our field to inform you about the past, present and future of our business enviroment.</p>
                  </div>
           </div>
-        <div class="container-fluid"  id = "news_container">
+          <div class = "loader mx-auto m-5" id = "preload"></div>
+        <div class="container-fluid"  id = "news_container" style = "visibility: hidden;">
             
             <div class="row m-5 border  rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
             
@@ -70,6 +87,16 @@
     <%- include("partials/tail"); -%>
 
     <script  src = "/javascripts/news.js"></script>
+
+    <script>
+        function handle_load(){
+  
+  
+          console.log('test');
+          document.getElementById('preload').style.display = "none";
+          document.getElementById('news_container').style.visibility = "visible";
+        }
+      </script>
 
   </body>
 
