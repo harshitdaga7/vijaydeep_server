@@ -81,12 +81,12 @@ async function delete_file_(id)
         await fs.unlink(pth2);
         await fs.unlink(pth3);
 
-        console.log('deleted successsfully')
+        //console.log('deleted successsfully')
         return true;
     }
     catch(e)
     {
-        console.log(e);
+        //console.log(e);
         return false;
     }
 }

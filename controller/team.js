@@ -83,12 +83,12 @@ async function delete_file_(id)
         var fileName = `team_${id}`
         var pth = path.join(__dirname,'..','public','images') + `/${fileName}`
         await fs.unlink(pth);
-        console.log('deleted successsfully')
+        //console.log('deleted successsfully')
         return true;
     }
     catch(e)
     {
-        console.log(e);
+        //console.log(e);
         return false;
     }
 }
@@ -101,7 +101,7 @@ async function delete_by_id_(id)
         const result = await Team.destroy({where:{id:id}})
         const r = await delete_file_(id);
 
-        console.log(r,result)
+        //console.log(r,result)
         return true;
         
     }
