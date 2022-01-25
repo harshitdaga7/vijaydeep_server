@@ -1,10 +1,10 @@
 const data = {
 
-    home : "We are agency to deal with pharmaceuticals",
-    about : "know more about vijaydeep agencies",
-    news : "be up to date on news of pharmacy",
+    home : "Vijaydeep Agencies is a distinguished importer, exporter and trader offering an enormous consignment of Diagnostics, Surgical and Pharmacutical equipment.",
+    about : "Vijaydeep Agencies is a distinguished importer, exporter and trader offering an enormous consignment of Diagnostics, Surgical and Pharmacutical equipment. Know more about us",
+    news : "Vijaydeep Agencies is a distinguished importer, exporter and trader offering an enormous consignment of Diagnostics, Surgical and Pharmacutical equipment. Be upto-date with news from our industry. ",
     team : "know more about the team that make up vijaydeep agency",
-    products : "the products that vijaydeep agencies sell",
+    products : "Vijaydeep Agencies is a distinguished importer, exporter and trader offering an enormous consignment of Diagnostics, Surgical and Pharmacutical equipment. Check our about our products.",
     contact : "how to contact and reach us",
     disclaimer : "this consists sites disclaimer",
     console : "console",
