@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var contactController = require('../controller/contact')
+var contactController = require('../controller/contact');
+var  teamController = require('../controller/team');
 var meta_data = require('../meta_data')
 
 
@@ -28,9 +29,24 @@ async function get_contact_data()
 
 }
 
+async function get_team_data(){
+
+  var temp_team_data = await teamController.find_all_();
+
+  if(temp_team_data){
+
+    return temp_team_data;
+  }
+  else{
+
+    return [];
+  }
+}
+
 router.get('/', async function(req, res, next) {
     // res.status(404);
     var contact_data = await get_contact_data();
+    var team_data = await get_team_data();
     var data = {
         title:"Team",
         meta_description : meta_data.team,
@@ -38,7 +54,8 @@ router.get('/', async function(req, res, next) {
         contact1:contact_data.contact1,
         contact2:contact_data.contact2,
         email:contact_data.email,
-        address:contact_data.address
+        address:contact_data.address,
+        team:team_data
     }
     res.render('team', data);
   });

@@ -66,20 +66,11 @@ input {
 input:focus {
   outline:none;
   border-color:#aaa;
-}
-.sort {
-  padding:8px 30px;
-  border-radius: 6px;
-  border:none;
-  display:inline-block;
-  color:#fff;
-  text-decoration: none;
-  background-color: #28a8e0;
-  height:30px;
-}
+}*/
+
 .sort:hover {
   text-decoration: none;
-  background-color:#1b8aba;
+  background-color:#302457;
 }
 .sort:focus {
   outline:none;
@@ -116,7 +107,17 @@ input:focus {
   position: relative;
   top:-10px;
   right:-5px;
-} */
+} 
+
+.carousel-control-prev-icon{
+
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff0000'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") !important;
+}
+
+.carousel-control-next-icon{
+
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff0000'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
 
   </style>
 
@@ -128,19 +129,19 @@ input:focus {
     <main id = "main-content" style="visibility: hidden;">
         <div class="container" id = "products_list">
 
-          <div class = "row mt-3 mb-5">
+          <div class = "row mt-5 mb-5">
             <div class = "col-lg-6 col-12 col-sm-12 col-md-12 p-2">
               <input class="search form-control border-2" style = "width: 100%;" placeholder="Search for product name" />
           </div>
 
             <div class = "col-lg-3 col-sm-6 col-6 col-md-6 p-2">
-              <button class="sort btn w-100" data-sort="name" style="color:white;">
+              <button class="sort btn w-100" data-bs-toggle="tooltip" data-bs-placement="top" title="click to sort by product name" data-sort="name" style="color:white;">
                 product
               </button>
             </div>
 
             <div class = "col-lg-3 col-sm-6 col-6 col-md-6 p-2">
-              <button class="sort btn w-100" data-sort="createdAt" style="color:white;">
+              <button class="sort btn w-100" data-bs-toggle="tooltip" data-bs-placement="top" title="click to sort by date " data-sort="createdAt" style="color:white;">
                 date
               </button>
 
@@ -153,16 +154,16 @@ input:focus {
           <button class="sort" data-sort="createdAt">
             Sort by date
           </button> -->
-          <ul class = "list">
+          <div class = "list">
           <% for( let i = 0; i < products.length; i++ ) { %>
 
             <% if( i%2==0){ %>
               <!-- <li> -->
-              <div id = "product_<%=products[i].id%>"class="row m-lg-5 m-md-5 m-sm-1 m-1 border  rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
+              <div id = "product_<%=products[i].id%>" class="row mx-lg-5 mx-md-5 mx-sm-1 mx-1 my-lg-5 my-md-5 my-sm-4 my-4 border  rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
             
                 
                 <div class="col-md-12 col-sm-12 col-lg-7 position-sticky" >
-                    <div id="carousel_<%= i%>" class="zoom carousel slide ratio ratio-16x9" data-bs-ride="carousel" style=" height:100%">
+                    <div id="carousel_<%= i%>" class="zoom carousel  slide ratio ratio-16x9" data-bs-ride="carousel" style=" height:100%">
                         <div class="carousel-inner" style=" height:100%">
                           <div class="carousel-item active" style=" height:100%" >
                             <img style="height:100% ; object-fit: cover;"  src="/images/<%= products[i].image1%>" class="d-block w-100" alt="..." loading = "lazy">
@@ -180,7 +181,7 @@ input:focus {
                         <span class="visually-hidden">Previous</span>
                       </button>
                       <button class="carousel-control-next" type="button" data-bs-target="#carousel_<%= i%>" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="carousel-control-next-icon"  aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                       </button>
     
@@ -200,7 +201,7 @@ input:focus {
              <% }else{ %>
 
               <!-- <li> -->
-              <div id = "product_<%=products[i].id%>" class="row  m-lg-5 m-md-5 m-sm-1 m-1 border rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
+              <div id = "product_<%=products[i].id%>" class="row mx-lg-5 mx-md-5 mx-sm-1 mx-1 my-lg-5 my-md-5 my-sm-4 my-4 border rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
             
                 
                 
@@ -230,7 +231,7 @@ input:focus {
                         <span class="visually-hidden">Previous</span>
                       </button>
                       <button class="carousel-control-next" type="button" data-bs-target="#carousel_<%= i%>" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="carousel-control-next-icon " aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                       </button>
     
@@ -246,7 +247,7 @@ input:focus {
             <!-- </li> -->
         <% } %> 
 
-          </ul>
+          </div>
 
         </div>
     </main>
