@@ -9,7 +9,7 @@
             <!-- Main content -->
             <main>
 
-                <div style="width: 100%;  display:flex;justify-content:center;flex-direction: column;align-items:center; background-image: url(/images/endless-constellationwhite.svg); "
+                <!-- <div style="width: 100%;  display:flex;justify-content:center;flex-direction: column;align-items:center; background-image: url(/images/endless-constellationwhite.svg);"
                     class="mt-5 p-5 border rounded-3  shadow-lg  container g-0">
                     <div style="max-width: 500px; max-height: 500px; overflow:hidden; "
                         class=" border shadow-lg ratio ratio-1x1 rounded-circle ">
@@ -18,37 +18,77 @@
 
 
 
-                    <h2 class="mt-3 ">Pradeep Haldankar</h2>
+                    <h2 class="mt-3" style = "text-align: center;">Pradeep Haldankar</h2>
 
                     <position style=" color: grey;
             text-align: center;">Director</position>
 
 
 
-                    <div style="margin: 5%;"> <img src="/images/icons/phone.png" height="36px" width="auto">
-                        &nbsp;<a href="tel:+91<%= contact1 %>" class="link-danger"
-                            style=" font-size: 1.5pc; color:rgb(17, 17, 17) ; text-decoration: none;">
+                    <div style="margin: 5%;"> 
+                        <img src="/images/icons/phone.png" height="24px" width="auto">
+                        &nbsp;<span><a href="tel:+91<%= contact1 %>" class="link-danger"
+                            style="color:rgb(17, 17, 17) ; text-decoration: none;">
                             <%= contact1 %>
                                 /
-                        </a> <a href="tel:+91<%= contact2 %> " class="link-danger"
-                            style=" font-size: 1.5pc; color:rgb(17, 17, 17) ; text-decoration: none;">
+                        </a> </span>
+                        
+                        <span><a href="tel:+91<%= contact2 %> " class="link-danger"
+                            style="color:rgb(17, 17, 17) ; text-decoration: none;">
                             <%= contact2 %>
                         </a>
+                        </span>
                     </div>
 
-                    <div> <img src="/images/icons/mail.png" height="36px" width="auto"> &nbsp; <a
-                            href="mailto:<%= email %>" class="link-danger"
-                            style="font-size: 1.5pc; color:rgb(17, 17, 17) ; text-decoration: none;">
-                            <%= email %>
-                        </a>
+                    <div> <img src="/images/icons/mail.png" height="24px" width="auto"> &nbsp; 
+                        <span><a href="mailto:<%= email %>" class="link-danger" style="color:rgb(17, 17, 17) ; text-decoration: none;"><%= email %></a>
+                            </span>
                     </div>
 
+
+                </div> -->
+
+
+                <div class = "container mt-5 border p-5" style = "background-image: url(/images/endless-constellationwhite.svg);">
+                    <div class = "row">
+                        <div class="col-12">
+                            <div style="max-width: 400px; max-height: 400px; overflow:hidden;" class=" border shadow-lg ratio ratio-1x1 rounded-circle mx-auto">
+                                    <img style="object-fit: cover ;" src="/images/icons/contact.jpeg" alt="Avatar">
+                            </div>
+                        </div>
+
+                        <div class="col-12 my-4">
+                            <h3 class = "text-center"><strong>Pradeep Haldankar</strong></h3>
+                            <h5 class = "text-center">Director</h5>
+                        </div>
+
+                        <div class = "col-12 text-center">
+                            <img src="/images/icons/phone.png" height="24px" width="auto">
+                            &nbsp;
+                            <a href="tel:+91<%= contact1 %>" class="link-danger"
+                                style="color:rgb(17, 17, 17) ; text-decoration: none;">
+                                <%= contact1 %>
+                            </a>               
+                            |             
+                            <a href="tel:+91<%= contact2 %> " class="link-danger"
+                                style="color:rgb(17, 17, 17) ; text-decoration: none;">
+                                <%= contact2 %>
+                            </a>
+                        </div>
+
+                        <div class="col-12 text-center my-2">
+
+                            <img src="/images/icons/mail.png" height="24px" width="auto">
+                            &nbsp;
+                            <a href="mailto:<%= email %>" class="link-danger"
+                                style="color:rgb(17, 17, 17) ; text-decoration: none;">
+                                <%= email %>
+                            </a>               
+                        </div>
+                    </div>
 
                 </div>
-
-                <iframe name="hiddenFrame" class="hide" style="display:none"></iframe>
-
-
+            
                 <div style="margin-top: 5%;"
                     class=" align-self-center flex-row container-fluid py-3 justify-content-center ">
 
@@ -56,18 +96,16 @@
                         <strong>Contact Us</strong>
                         
 
-
-                        <!-- <img src = "icons8-location.gif" height="36px" width="36px">  -->
                     </h1>
 
-                    <div class="row justify-content-center align-items-center position-relative">
+                    <div class="row justify-content-center align-items-center ">
                         <div class="col p-0"><iframe allowfullscreen="" frameborder="0"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609591992!2d72.74110205851967!3d19.082197841169613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1639309178027!5m2!1sen!2sin"
                                 width="100%" height="1000" style="filter: grayscale(100%);opacity: 0.50;"></iframe>
                         </div>
 
-                        <div class="col-md-6 col-lg-5 col-xl-4 position-absolute" style="background-image: url(/images/endless-constellationwhite.svg);" >
-                            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSepzq1zzNAZCjCrlXw_Oz4suINJdhPcA-lBYXmDbr41vcHU9Q/formResponse" target="hiddenFrame" class="shadow-sm p-4 rounded" method="post">
+                        <div class="col-md-6 col-lg-5 col-xl-4 position-absolute" style="background-image: url(/images/endless-constellationwhite.svg); z-index: 50;" >
+                            <form  class="shadow-sm p-4 rounded">
 
                                 <div>
                                     <h4>Leave us a Message</h4>
@@ -79,23 +117,22 @@
 
                                 <div class="mb-3">
                                     <label class="form-label">Name</label>
-                                    <input class="form-control" maxlength="100" type="text" name="entry.1378129362" required>
+                                    <input class="form-control" id = "contact_name" maxlength="100" type="text" name="entry.1378129362" required>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Email</label>
-                                    <input class="form-control" maxlength="100" type="email" name="entry.19282730" required>
+                                    <input class="form-control" maxlength="100" id = "contact_email" type="email" name="entry.19282730" required>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Contact No.</label>
-                                    <input class="form-control" maxlength="13" type="text" name="entry.1411594711" required>
+                                    <input class="form-control" maxlength="13" id = "contact_number" type="text" name="entry.1411594711" required>
                                 </div>
                                 <div class="mb-4"><label class="form-label">Message</label><textarea
-                                        class="form-control" required="" rows="4" name="entry.175532735"></textarea></div>
-                                <div><button style="color: white;
-                    text-shadow: 2px 2px 4px #000000; margin-left: 5px;
-
-      margin-right: 5px; min-width: fit-content; " class="btn btn-primary w-100 mb-2 btn btn-danger"
-                                       onclick="Success()" type="submit">Submit</button>
+                                        class="form-control" id = "contact_message" rows="4" name="entry.175532735" required></textarea></div>
+                                <div>
+                                
+                                    <button id = "contact_submit" style="color: white;text-shadow: 2px 2px 4px #000000; margin-left: 5px;margin-right: 5px; min-width: fit-content; " class="btn btn-primary w-100 mb-2 btn btn-danger"type="submit">Submit</button>
+                                   
                                     <p><small class="text-black-50">We are going ahead where are you going?<br></small>
                                     </p>
                                 </div>
@@ -124,7 +161,44 @@
 
 </html>
 <script>
-    function Success(){
-        alert("Your message is sent")
+
+    document.getElementById('contact_submit').addEventListener('click',handle_contact_submit);
+
+    function handle_contact_submit(e){
+
+        e.preventDefault();
+
+        
+        let contact_email = document.getElementById('contact_email');
+        let contact_name = document.getElementById('contact_name');
+        let contact_number = document.getElementById('contact_number');
+        let contact_message = document.getElementById('contact_message');
+
+        if(contact_email.reportValidity() && contact_name.reportValidity() && contact_number.reportValidity() && contact_message.reportValidity()){
+
+            
+            var formData = new FormData();
+
+            formData.append('entry.1378129362',contact_name.value);
+            formData.append('entry.19282730',contact_email.value);
+            formData.append('entry.1411594711',contact_number.value);
+            formData.append('entry.175532735',contact_message.value);
+
+
+            var requestOptions = {
+                method: 'POST',
+                body: formData,
+                redirect: 'follow',
+                mode: "cors"
+                };
+
+            fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSepzq1zzNAZCjCrlXw_Oz4suINJdhPcA-lBYXmDbr41vcHU9Q/formResponse",requestOptions)
+            .then((response)=>{
+
+                alert('send successfully u will recieve confirmation email')
+            })
+            .catch((err)=>alert('send successfully u will recieve confirmation email'))
+            
+        }
     }
 </script>

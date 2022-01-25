@@ -15,7 +15,7 @@ async function create_or_update_(data)
 
     var mottos = await Motto.findAll();
 
-    console.log("inside motto",data);
+    //console.log("inside motto",data);
 
     if(mottos.length < 1)
     {
