@@ -17,6 +17,8 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+
     </style>
 
   <body onload = "handle_load()">
@@ -28,8 +30,8 @@
         <div class="p-4 p-md-5 mb-4 text-white  " style="background-image: url('/images/endless-constellationred.svg'); background-repeat: no-repeat; background-size: cover ;">
             
             <div class="col-md-6 px-0">
-              <h1 class="display-4 fst-italic">Learn about our most recent developments</h1>
-              <p class="lead my-3">Leading news from the industry and our field to inform you about the past, present and future of our business enviroment.</p>
+              <h1 class="display-4 fst-italic" style = "font-size: 2.5em;">Learn about our most recent developments</h1>
+              <p class="lead my-3" style = "font-size: 1em;">Leading news from the industry and our field to inform you about the past, present and future of our business enviroment.</p>
                  </div>
           </div>
           <div class = "loader mx-auto m-5" id = "preload"></div>
@@ -43,7 +45,7 @@
 
 
                 
-            <div class="row m-5 border  rounded-3 border-1 shadow-lg" id = "news_<%= news[i].id %>" style="overflow:hidden; " >
+            <div class="row m-lg-5 m-md-5 m-sm-1 m-1 border  rounded-3 border-1 shadow-lg" id = "news_<%= news[i].id %>" style="overflow:hidden; " >
             
                 
                 <div class="col-md-12 col-sm-12 col-lg-3 position-sticky " >
@@ -52,11 +54,11 @@
                 </div>
                 <div class="col-md-12 col-sm-12 col-lg-9 bg-light p-5" style="overflow:hidden; z-index: 50;">
                     <h1 ><%= news[i].headline %> </h1>
-                    <p class="small">
-                        <img src="/images/icons8-calendar-30.png" height="26px" width="auto"> <%= news[i].createdAt %> 
+                    <p class="small" style = "font-size: 0.7em;">
+                        <img src="/images/icons8-calendar-30.png" height="15em" width="auto"> <%= news[i].createdAt %> 
                     </p>
                     <p style="font-size: medium;"><%= news[i].article %> </p>
-                    <a href="<%= news[i].link %> ">//LInk for more info</a>
+                    <a href="<%= news[i].link %> " style = "font-size: small;">Click for more info</a>
     
                 </div>
                 
@@ -69,17 +71,17 @@
 
              <% }else{ %>
 
-                <div class="row m-5 border rounded-3 border-1 shadow-lg" id = "news_<%= news[i].id%> " style="overflow:hidden; " >
+                <div class="row m-lg-5 m-md-5 m-sm-1 m-1 border rounded-3 border-1 shadow-lg" id = "news_<%= news[i].id%> " style="overflow:hidden; " >
             
                 
                 
                     <div class="col-md-12 col-sm-12 col-lg-9 bg-light p-5 order-lg-0 order-1 " style="overflow:hidden; z-index: 50;">
                         <h1 ><%= news[i].headline %> </h1>
-                        <p class="small">
-                            <img src="/images/icons8-calendar-30.png" height="26px" width="auto"> <%= news[i].createdAt %> 
+                        <p class="small" style = "font-size: 0.7em;">
+                            <img src="/images/icons8-calendar-30.png" height="15em" width="auto"> <%= news[i].createdAt %> 
                         </p>
                         <p style="font-size: medium;"><%= news[i].article %> </p>
-                        <a href="<%= news[i].link %> ">//LInk for more info</a>
+                        <a href="<%= news[i].link %> " style = "font-size: small;">Click for more info</a>
         
                     </div>
                     <div class="col-md-12 col-sm-12 col-lg-3 position-sticky order-lg-1 order-0" >

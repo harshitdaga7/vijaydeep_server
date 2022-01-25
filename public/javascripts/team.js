@@ -27,6 +27,7 @@ function create_team(position = "director")
                     
                     if(result.data[i].position.toLowerCase() == position.toLowerCase())
                     {
+
                         let d = `
                         <div class="col-lg-6 text-center p-5" style = "height:inherit">
                             <div style=" display:flex;
@@ -158,4 +159,4 @@ function create_team(position = "director")
 }
 
 
-create_team();
+// create_team();

@@ -26,6 +26,99 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* h2 {
+  font-family:sans-serif;
+}
+.list {
+  font-family:sans-serif;
+  margin:0;
+  padding:20px 0 0;
+}
+.list > li {
+  display:block;
+  background-color: #eee;
+  padding:10px;
+  box-shadow: inset 0 1px 0 #fff;
+}
+.avatar {
+  max-width: 150px;
+}
+img {
+  max-width: 100%;
+}
+h3 {
+  font-size: 16px;
+  margin:0 0 0.3rem;
+  font-weight: normal;
+  font-weight:bold;
+}
+p {
+  margin:0;
+}
+
+input {
+  border:solid 1px #ccc;
+  border-radius: 5px;
+  padding:7px 14px;
+  margin-bottom:10px
+}
+input:focus {
+  outline:none;
+  border-color:#aaa;
+}*/
+
+.sort:hover {
+  text-decoration: none;
+  background-color:#302457;
+}
+.sort:focus {
+  outline:none;
+}
+.sort:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+}
+.sort.asc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:13px;
+  right:-5px;
+}
+.sort.desc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+} 
+
+.carousel-control-prev-icon{
+
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff0000'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") !important;
+}
+
+.carousel-control-next-icon{
+
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff0000'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
   </style>
 
   <body onload="handle_load()">
@@ -34,18 +127,43 @@
      <div class = "loader mx-auto m-5" id = "preload"></div>
         <!-- Main content -->
     <main id = "main-content" style="visibility: hidden;">
-        <div class=" container-fluid"  >
+        <div class="container" id = "products_list">
 
+          <div class = "row mt-5 mb-5">
+            <div class = "col-lg-6 col-12 col-sm-12 col-md-12 p-2">
+              <input class="search form-control border-2" style = "width: 100%;" placeholder="Search for product name" />
+          </div>
 
+            <div class = "col-lg-3 col-sm-6 col-6 col-md-6 p-2">
+              <button class="sort btn w-100" data-bs-toggle="tooltip" data-bs-placement="top" title="click to sort by product name" data-sort="name" style="color:white;">
+                product
+              </button>
+            </div>
+
+            <div class = "col-lg-3 col-sm-6 col-6 col-md-6 p-2">
+              <button class="sort btn w-100" data-bs-toggle="tooltip" data-bs-placement="top" title="click to sort by date " data-sort="createdAt" style="color:white;">
+                date
+              </button>
+
+            </div>
+          </div>
+          <!-- <input class="search" placeholder="Search for product name" />
+          <button class="sort" data-sort="name">
+            Sort by Product name
+          </button>
+          <button class="sort" data-sort="createdAt">
+            Sort by date
+          </button> -->
+          <div class = "list">
           <% for( let i = 0; i < products.length; i++ ) { %>
 
             <% if( i%2==0){ %>
-
-              <div id = "product_<%=products[i].id%>"class="row m-5 border  rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
+              <!-- <li> -->
+              <div id = "product_<%=products[i].id%>" class="row mx-lg-5 mx-md-5 mx-sm-1 mx-1 my-lg-5 my-md-5 my-sm-4 my-4 border  rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
             
                 
                 <div class="col-md-12 col-sm-12 col-lg-7 position-sticky" >
-                    <div id="carousel_<%= i%>" class="zoom carousel slide ratio ratio-16x9" data-bs-ride="carousel" style=" height:100%">
+                    <div id="carousel_<%= i%>" class="zoom carousel  slide ratio ratio-16x9" data-bs-ride="carousel" style=" height:100%">
                         <div class="carousel-inner" style=" height:100%">
                           <div class="carousel-item active" style=" height:100%" >
                             <img style="height:100% ; object-fit: cover;"  src="/images/<%= products[i].image1%>" class="d-block w-100" alt="..." loading = "lazy">
@@ -63,37 +181,33 @@
                         <span class="visually-hidden">Previous</span>
                       </button>
                       <button class="carousel-control-next" type="button" data-bs-target="#carousel_<%= i%>" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="carousel-control-next-icon"  aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                       </button>
     
                 </div>
-                <div class="col-md-12 col-sm-12 col-lg-5  p-3" style="overflow:hidden; z-index: 50; background-image: url(/images/endless-constellationwhite.svg)">
-                    <h1 ><%= products[i].name%></h1>
-                    <p class="small">
-                        <img src="/images/icons8-calendar-30.png" height="26px" width="auto"> <%= products[i].createdAt%>
-                    </p>
+                <div class="col-md-12 col-sm-12 col-lg-5 p-3" style="overflow:hidden; z-index: 50; background-image: url(/images/endless-constellationwhite.svg)">
+                    <h1 class = "name"><%= products[i].name%></h1>
+                    <img src="/images/icons8-calendar-30.png" height="15em" width="auto"><span class="small createdAt"  style = "font-size: x-small;"><%= products[i].createdAt%></span>
                     <p style="font-size: medium; white-space:pre-wrap "><%= products[i].description%></p>
                     <a style="font-size:x-small" href="<%= products[i].link%>">Check this link for more info></a>
     
                 </div>
                 
     
-    
             </div>
+            <!-- </li> -->
 
              <% }else{ %>
 
-
-              <div id = "product_<%=products[i].id%>" class="row m-5 border rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
+              <!-- <li> -->
+              <div id = "product_<%=products[i].id%>" class="row mx-lg-5 mx-md-5 mx-sm-1 mx-1 my-lg-5 my-md-5 my-sm-4 my-4 border rounded-3 border-1 shadow-lg " style="overflow:hidden; " >
             
                 
                 
                 <div class="col-md-12 col-sm-12 col-lg-5 p-3 order-lg-0 order-1 " style="background-image: url(/images/endless-constellationwhite.svg) ;overflow:hidden; z-index: 50;">
-                    <h1 ><%= products[i].name%></h1>
-                    <p class="small">
-                        <img src="/images/icons8-calendar-30.png" height="26px" width="auto"> <%= products[i].createdAt%>
-                    </p>
+                    <h1 class="name" ><%= products[i].name%></h1>
+                    <img src="/images/icons8-calendar-30.png" height="15em" width="auto"> <span class="small createdAt" style = "font-size:x-small;"><%= products[i].createdAt%></span>
                     <p style="font-size: medium;"><%= products[i].description%></p>
                     <a style="font-size:x-small" href="<%= products[i].link%>">Check this link for more info></a>  
               </div>
@@ -117,7 +231,7 @@
                         <span class="visually-hidden">Previous</span>
                       </button>
                       <button class="carousel-control-next" type="button" data-bs-target="#carousel_<%= i%>" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="carousel-control-next-icon " aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                       </button>
     
@@ -129,10 +243,11 @@
 
                 
               <% } %>
-
-
-    
+              
+            <!-- </li> -->
         <% } %> 
+
+          </div>
 
         </div>
     </main>
@@ -141,7 +256,11 @@
 
     <%- include("partials/tail"); -%>
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+
     <script>
+
+
       function handle_load(){
 
 
@@ -149,6 +268,12 @@
         document.getElementById('preload').style.display = "none";
         document.getElementById('main-content').style.visibility = "visible";
       }
+
+      var options = {
+        valueNames: [ 'name', 'createdAt' ]
+    };
+
+    var userList = new List('products_list', options);
     </script>
 
   </body>
