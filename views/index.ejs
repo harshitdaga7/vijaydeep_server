@@ -1,12 +1,100 @@
 <!doctype html>
 <html lang="en">
   <%- include("partials/head",{title:title,meta_description : meta_description}); -%>
+  <style>
+      .loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #db4d34;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;}
 
-  <body >
+  .shapes-9 {
+  width: 40px;
+  height: 20px;
+  background:rgb(156, 10, 10);
+  position: relative;
+  animation: sh9-0 1.5s infinite linear;
+}
+.shapes-9:before,
+.shapes-9:after {
+   content:"";
+   position: absolute;
+   background:inherit; 
+   bottom: 100%;
+   width: 50%;
+   height: 100%;
+   animation: inherit;
+   animation-name: sh9-1;
+}
+.shapes-9:before {
+  left:0;
+  transform-origin: bottom left;
+  --s:-1;
+}
+.shapes-9:after {
+  right:0;
+  transform-origin: bottom right;
+}
+@keyframes sh9-0 {
+   0%,10%   {transform:translateY(0%)    scaleY(1)}
+   49.99%   {transform:translateY(-50%)  scaleY(1)}
+   50%      {transform:translateY(-50%)  scaleY(-1)}
+   90%,100% {transform:translateY(-100%) scaleY(-1)}
+}
+@keyframes sh9-1 {
+   10%,90% {transform: rotate(0deg)}
+   50%     {transform: rotate(calc(var(--s,1)*180deg))}
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.continuous-1 {
+  width: 120px;
+  height:20px;
+  background: 
+    linear-gradient(90deg,rgba(0, 6, 16, 0.067) 33%,rgba(1, 15, 43, 0.333) 50%,rgba(3, 3, 104, 0.067) 66%)
+    #7284f8;
+  background-size:300% 100%;
+  animation: ct1 1s infinite linear;
+}
+
+@keyframes ct1 {
+  0% {background-position: right}
+}
+
+.centered1 {
+  position: fixed; /* or absolute */
+  top: 30%;
+  left: 50%;
+}
+
+.centered2 {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 40%;
+}
+
+.centered3 {
+  position: fixed; /* or absolute */
+  top: 70%;
+  left: 50%;
+}
+
+  </style>
+
+  <body onload="handle_load()">
     <%- include("partials/navbar",{role:role,contact1:contact1,contact2:contact2,email:email}); -%>
 
         <!-- Main content -->
-        <main>
+        <div class = "shapes-9 centered1" id = "preload"></div>
+        <div class = "centered2" id = "preload2"><img src = "/images/logo.png"></img></div>
+        <div class = "continuous-1 centered3" id = "preload1"></div>
+        <main id = "main-content" style = "visibility: hidden;">
 
           <!-- Carousel -->
   
@@ -19,25 +107,40 @@
                       aria-label="Slide 2"></button>
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                       aria-label="Slide 3"></button>
+
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                      aria-label="Slide 4"></button>
+
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                      aria-label="Slide 5"></button>
+
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                      aria-label="Slide 6"></button>
+
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+                      aria-label="Slide 7"></button>
+
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"
+                      aria-label="Slide 8"></button>
               </div>
   
               <div class="carousel-inner" style=" background: rgb(0, 0, 0); font-family: Georgia, 'Times New Roman', Times, serif;">
                   <div class="carousel-item active">
                       <div class="ratio ratio-16x9">
-                          <img loading="lazy" src="/images/carousel1.jpg" class="d-block w-100 carousel-overlay" alt="...">
+                          <img  src="/images/carousel1.jpg" class="d-block w-100 carousel-overlay" alt="...">
                       </div>
                       <div class="carousel-caption d-none d-md-block">
                           <h1>Looking for more than just service? Begin your adventure with us.</h1>
-                          <p>Find out about our clients on the <a href="/about" style="text-decoration: none; color: #dc0814 "><strong>About Us</strong></a> page.</p>
+                          <p>Find out about our products on the <a href="/products" style="text-decoration: none; color: #dc0814 "><strong>Products</strong></a> page.</p>
                       </div>
                   </div>
                   <div class="carousel-item">
                       <div class="ratio ratio-16x9">
-                          <img  loading="lazy" src="/images/carousel2.jpg" class="d-block w-100 carousel-overlay" alt="...">
+                          <img   src="/images/carousel2.jpg" class="d-block w-100 carousel-overlay" alt="...">
                       </div>
                       <div class="carousel-caption d-none d-md-block">
                           <h1>Our destiny is not written for us, it is written by us.</h1>
-                          <p>Find out about our team on the <a href="/team" style="text-decoration: none; color: #dc0814 "><strong >Teams</strong></a>  page.</p>
+                          <p>Find out about our products on the <a href="/products" style="text-decoration: none; color: #dc0814 "><strong >Products</strong></a>  page.</p>
                       </div>
                   </div>
                   <div class="carousel-item">
@@ -46,9 +149,60 @@
                       </div>
                       <div class="carousel-caption d-none d-md-block">
                           <h1>Opportunities increase when you help others win, a little win for our partners is a great win for us.</h1>
-                          <p>Find out about our partners on the <a href="/about" style="text-decoration: none; color: #dc0814 "> <strong >About Us</strong></a> page.</p>
+                          <p>Find out about our products on the <a href="/products" style="text-decoration: none; color: #dc0814 "> <strong >Products</strong></a> page.</p>
                       </div>
                   </div>
+
+                  <div class="carousel-item">
+                      <div class="ratio ratio-16x9">
+                          <img   src="/images/carousel4.jpg" class="d-block w-100 carousel-overlay" alt="...">
+                      </div>
+                      <div class="carousel-caption d-none d-md-block">
+                          <h1>The only place where <strong>success </strong> comes before <strong>work</strong> is in the dictionary.</h1>
+                          <p>Find out about our team on the <a href="/team" style="text-decoration: none; color: #dc0814 "><strong >Teams</strong></a>  page.</p>
+                      </div>
+                  </div>
+
+                  <div class="carousel-item">
+                      <div class="ratio ratio-16x9">
+                          <img   src="/images/carousel5.jpg" class="d-block w-100 carousel-overlay" alt="...">
+                      </div>
+                      <div class="carousel-caption d-none d-md-block">
+                          <h1>You miss 100% of the shots you don't take.</h1>
+                          <p>Find out more <a href="/about" style="text-decoration: none; color: #dc0814 "><strong >About us</strong></a>.</p>
+                      </div>
+                  </div>
+
+                  <div class="carousel-item">
+                      <div class="ratio ratio-16x9">
+                          <img   src="/images/carousel6.jpg" class="d-block w-100 carousel-overlay" alt="...">
+                      </div>
+                      <div class="carousel-caption d-none d-md-block">
+                          <h1>Once you live in mumbai no place else is good enough.</h1>
+                          <p>Reach out to us at the <a href="/contact" style="text-decoration: none; color: #dc0814 "><strong >Contact Us</strong></a> page .</p>
+                      </div>
+                  </div>
+
+                  <div class="carousel-item">
+                      <div class="ratio ratio-16x9">
+                          <img   src="/images/carousel7.jpg" class="d-block w-100 carousel-overlay" alt="...">
+                      </div>
+                      <div class="carousel-caption d-none d-md-block">
+                          <h1>Great men are not <strong>born</strong> great they <strong>grow</strong> great</h1>
+                          <p>Find out about our team on the <a href="/team" style="text-decoration: none; color: #dc0814 "><strong >Teams</strong></a>  page.</p>
+                      </div>
+                  </div>
+
+                  <div class="carousel-item">
+                      <div class="ratio ratio-16x9">
+                          <img   src="/images/carousel8.jpg" class="d-block w-100 carousel-overlay" alt="...">
+                      </div>
+                      <div class="carousel-caption d-none d-md-block">
+                          <h1>Don't be busy , be productive</h1>
+                          <p>Find out about our team on the <a href="/team" style="text-decoration: none; color: #dc0814 "><strong >Teams</strong></a>  page.</p>
+                      </div>
+                  </div>
+
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                   data-bs-slide="prev">
@@ -159,7 +313,7 @@
                       <div class="d-flex justify-content-center shadow-lg"><iframe
                               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.3607898863897!2d72.83542331392864!3d19.003817059178022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf07bcf1bb1b%3A0xf62fdfe9702e4814!2sVijaydeep%20Agencies!5e0!3m2!1sen!2sin!4v1638910507674!5m2!1sen!2sin"
                               width="100%" height="100%" style="border:0;min-height: 300px;" allowfullscreen=""
-                              loading="lazy"></iframe>
+                              ></iframe>
                       </div>
                   </div>
   
@@ -176,6 +330,19 @@
 
     <%- include("partials/tail"); -%>
     <script src = "/javascripts/index.js"></script>
+    <script>
+              
+    function handle_load(){
+
+        console.log('test');
+        document.getElementById('preload').style.display = "none";
+        document.getElementById('preload1').style.display = "none";
+        document.getElementById('preload2').style.display = "none";
+
+        document.getElementById('main-content').style.visibility = "visible";
+        }
+
+    </script>
 
   </body>
 
